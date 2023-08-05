@@ -23,17 +23,19 @@ for (var entryName in config.entry) {
 
 delete config.chromeExtensionBoilerplate;
 
+// Add HotModuleReplacementPlugin to plugin list
+config.plugins = [new webpack.HotModuleReplacementPlugin({})].concat(
+  config.plugins || []
+);
+
 var compiler = webpack(config);
 
 var server = new WebpackDevServer(
   {
     https: false,
-    hot: true,
+    hot: false,
     liveReload: false,
-    client: {
-      webSocketTransport: 'sockjs',
-    },
-    webSocketServer: 'sockjs',
+    client: false,
     host: 'localhost',
     port: env.PORT,
     static: {
