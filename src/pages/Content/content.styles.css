@@ -1,0 +1,202 @@
+.gh_emoji_container {
+  width: 250px;
+  background-color: rgb(250, 249, 249);
+  padding: 10px;
+  border: 1px solid #DDD;
+}
+
+
+#gh_emoji_input_search,
+#gh_emoji_input_output {
+  width: 100%;
+  padding: 5px 10px;
+  padding-left: 30px;
+  border-radius: 30px;
+  font-size: 15px;
+  color: #333;
+  border: 1px solid #DDD;
+  background-color: rgb(231, 231, 231);
+}
+
+#gh_emoji_input_search::placeholder,
+#gh_emoji_input_output::placeholder {
+  color: rgb(199, 198, 198);
+}
+
+.gh_emoji_input-wrapper {
+  position: relative;
+}
+
+.gh_emoji_search_icon {
+  position: absolute;
+  left: 9px;
+  top: 7px;
+  height: 17px;
+  width: 17px;
+}
+
+.gh_emoji_input-wrapper {
+  padding-bottom: 10px;
+  background-color: rgb(250, 249, 249);
+}
+
+#gh_emoji_input_output {
+  padding-left: 10px;
+  margin-top: 5px;
+}
+
+.gh_emoji_shortcut-wrapper {
+  display: flex;
+  background-color: rgb(250, 249, 249);
+  padding-top: 10px;
+}
+
+.gh_emoji_shortcut-wrapper a img {
+  height: 15px;
+  width: 15px;
+  opacity: 0.7;
+}
+
+.gh_emoji_shortcut-wrapper a {
+  flex: 1;
+  text-align: center;
+  transform: scale(1);
+  transition: all 0.25s;
+}
+
+.gh_emoji_shortcut-wrapper a:hover {
+  transform: scale(1.1);
+  transition: all 0.25s;
+}
+
+.gh_emoji_directory-wrapper {
+  padding: 0px 10px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.gh_emoji_directory-wrapper .gh_emoji_title {
+  color: #666;
+  text-transform: uppercase;
+  display: flex;
+  font-size: 13px;
+  letter-spacing: 0px;
+
+  margin-bottom: 5px;
+  align-items: center;
+}
+
+.gh_emoji_directory-wrapper .gh_emoji_emojis {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+}
+
+.gh_emoji_directory-wrapper .gh_emoji_emojis button {
+  border: 0px solid transparent;
+  background-color: transparent;
+  font-size: 25px;
+  margin-right: 3px;
+  margin-bottom: 3px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all 0.25s;
+  flex: 1;
+  padding: 0px 4px;
+  padding-top: 2px;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.gh_emoji_directory-wrapper .gh_emoji_emojis button:hover {
+  transform: scale(1.1);
+  transition: all 0.25s;
+  background-color: #DDD;
+  border-radius: 4px;
+}
+
+.gh_emoji_directory-wrapper .gh_emoji_emojis button:active {
+  transform: scale(0.9);
+  transition: all 0.25s;
+}
+
+
+.gh_emoji_no-result {
+  color: #666;
+  display: flex;
+  font-size: 13px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.gh_emoji_no-result {
+  display: block;
+}
+
+.gh_emoji_no-result a {
+  color: #20a0eb;
+}
+
+.gh_emoji_loading {
+  text-align: center;
+  padding: 10px 0px;
+}
+
+@keyframes spinLoader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.gh_emoji_loading img {
+  opacity: 0.9;
+  height: 30px;
+  width: 30px;
+  animation: spinLoader 2s infinite;
+}
+
+
+.gh_emoji_directory-wrapper .emojis {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+}
+
+.gh_emoji_directory-wrapper .emojis button {
+  border: 0px px solid transparent;
+  background-color: transparent;
+  font-size: 25px;
+  margin-right: 3px;
+  margin-bottom: 3px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all 0.25s;
+  flex: 1;
+  padding: 0px 4px;
+  padding-top: 2px;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border-width: 0px;
+}
+
+
+.gh_emoji_directory-wrapper .emojis textarea:focus,
+.gh_emoji_directory-wrapper .emojis button:focus,
+.gh_emoji_directory-wrapper .emojis input:focus {
+  outline: none;
+  border-width: 0px;
+}
