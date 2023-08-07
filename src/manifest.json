@@ -17,7 +17,11 @@
   "content_scripts": [
     {
       "matches": ["https://github.com/*"],
-      "js": ["contentScript.bundle.js"],
+      "js": [
+        "react/react.min.js",
+        "react/react-dom.min.js",
+        "contentScript.bundle.js"
+      ],
       "css": ["content.styles.css"]
     }
   ],

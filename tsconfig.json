@@ -17,7 +17,13 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "noEmit": false,
-    "jsx": "react"
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@utils/*": [
+        "./src/utils/*"
+      ]
+    }
   },
   "include": [
     "src",
