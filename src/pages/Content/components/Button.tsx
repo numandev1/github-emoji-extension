@@ -1,32 +1,64 @@
-import React, { useState } from 'react';
-import { decodeHtmlEntity } from '@utils/index';
+import React, { useState, useEffect } from 'react';
 import { Popover } from 'react-tiny-popover';
 import { SVG } from './SVGs';
 import { emojisDirectories } from '../modules/emojies';
+import useDebouncedCallback from '../modules/useDebouncedCallback';
 const Button = () => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+  const [emojisDirectoriesState, setEmojisDirectoriesState] =
+    useState(emojisDirectories);
 
-  const handleClick = () => {
+  useEffect(() => {
+    isPopoverOpen && setEmojisDirectoriesState(emojisDirectories);
+  }, [isPopoverOpen]);
+
+  const updateEmojis = useDebouncedCallback((text: string) => {
+    console.log('text', text);
+    const searchedText = text.toLowerCase();
+    const filteredEmojiDirectories: any = [];
+    emojisDirectories.forEach((section: any) => {
+      const emojis = section.emojis.filter((emoji: any) =>
+        emoji.terms.toLowerCase().includes(searchedText)
+      );
+      if (emojis.length > 0) {
+        filteredEmojiDirectories.push({
+          ...section,
+          emojis,
+        });
+      }
+    });
+
+    setEmojisDirectoriesState(filteredEmojiDirectories);
+  }, 200);
+
+  const onSearch = (e: any) => {
+    const value = e.target.value;
+    updateEmojis(value);
+  };
+
+  const onSelectEmojiHandler = (emoji: string) => {
     const textField: any = document.getElementById('new_comment_field');
     if (textField) {
-      textField.value += decodeHtmlEntity('&#x1F604;');
+      textField.value += emoji;
     }
   };
 
   const onClicEmoji = () => {
+    isPopoverOpen && document.getElementById('new_comment_field')?.focus();
     setIsPopoverOpen(!isPopoverOpen);
   };
 
   return (
     <Popover
       isOpen={isPopoverOpen}
-      positions={['top', 'left']} // if you'd like, you can limit the positions
-      padding={10} // adjust padding here!
-      reposition={false} // prevents automatic readjustment of content position that keeps your popover content within its parent's bounds
-      onClickOutside={() => setIsPopoverOpen(false)} // handle click events outside of the popover/target here!
-      content={(
-        { position, nudgedLeft, nudgedTop } // you can also provide a render function that injects some useful stuff!
-      ) => (
+      positions={['top', 'left']} //
+      padding={10}
+      reposition={false}
+      onClickOutside={() => {
+        setIsPopoverOpen(false);
+        document.getElementById('new_comment_field')?.focus();
+      }}
+      content={({ position, nudgedLeft, nudgedTop }) => (
         <div className="gh_emoji_container">
           {/** Input **/}
           <div className="gh_emoji_input-wrapper">
@@ -35,28 +67,38 @@ const Button = () => {
               src={SVG['search']}
               alt="search icon"
             />
-            <input id="gh_emoji_input_search" placeholder="Search emoji..." />
+            <input
+              id="gh_emoji_input_search"
+              placeholder="Search emoji..."
+              onChange={onSearch}
+            />
           </div>
-          {/** Input **/}
+          {/** emojies **/}
           <div className="gh_emoji_directory-wrapper">
-            {/* <p className="gh_emoji_loading">
-              <img src={SVG['spin']} alt="spin icon" />
-            </p> */}
-
-            {emojisDirectories.map((section) => {
-              return (
-                <>
-                  <p className="title" id={`gh_emoji_${section.link}`}>
-                    <span>{section.title}</span>
-                  </p>
-                  <div className="emojis">
-                    {section.emojis?.map((item) => {
-                      return <button>{item.value}</button>;
-                    })}
-                  </div>
-                </>
-              );
-            })}
+            {emojisDirectoriesState.length === 0 ? (
+              <p>No emoji found.</p>
+            ) : (
+              emojisDirectoriesState.map((section) => {
+                return (
+                  <>
+                    <p className="title" id={`gh_emoji_${section.link}`}>
+                      <span>{section.title}</span>
+                    </p>
+                    <div className="emojis">
+                      {section.emojis?.map((item) => {
+                        return (
+                          <button
+                            onClick={() => onSelectEmojiHandler(item.value)}
+                          >
+                            {item.value}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </>
+                );
+              })
+            )}
           </div>
 
           <div className="gh_emoji_shortcut-wrapper">
@@ -101,12 +143,6 @@ const Button = () => {
       <span onClick={onClicEmoji}>😋</span>
     </Popover>
   );
-
-  // return <span onClick={handleClick}>😋</span>;
 };
 
 export default Button;
-
-const styles = {
-  popoverContainer: {},
-};

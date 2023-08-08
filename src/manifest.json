@@ -16,7 +16,11 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://github.com/*"],
+      "matches": [
+        "https://github.com/*",
+        "https://github.com/*/pull/*",
+        "https://github.com/*/issues/*"
+      ],
       "js": [
         "react/react.min.js",
         "react/react-dom.min.js",
