@@ -2,18 +2,53 @@ import React, { useState, useEffect } from 'react';
 import { Popover } from 'react-tiny-popover';
 import { SVG } from './SVGs';
 import { emojisDirectories } from '../modules/emojies';
+import {
+  getRecentsEmojis,
+  getRecentsEmojisLisner,
+  setRecentEmojis,
+} from '../storage/index';
 import useDebouncedCallback from '../modules/useDebouncedCallback';
-const Button = () => {
+const allTextAreasArray = [
+  //@ts-ignore
+  ...document.querySelectorAll('textarea[name="comment[body]"]'),
+];
+
+const Button = ({ index }: { index: number }) => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [recentsEmojis, setRecentsEmojis] = useState([]);
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+
   const [emojisDirectoriesState, setEmojisDirectoriesState] =
     useState(emojisDirectories);
 
+  const getRecentEmojiHandler = () => {
+    getRecentsEmojisLisner((result: any[]) => {
+      if (result.length > 0) {
+        setRecentsEmojis(result);
+      }
+    });
+    getRecentsEmojis()
+      .then((result: any[]) => {
+        if (result.length > 0) {
+          setRecentsEmojis(result);
+        }
+      })
+      .catch((error) => {
+        console.log('error=>', error);
+      });
+  };
+
   useEffect(() => {
     isPopoverOpen && setEmojisDirectoriesState(emojisDirectories);
+    isPopoverOpen && getRecentEmojiHandler();
   }, [isPopoverOpen]);
 
+  useEffect(() => {
+    // getRecentEmojiHandler();
+  }, []);
+
   const updateEmojis = useDebouncedCallback((text: string) => {
-    console.log('text', text);
+    setSearchTerm(text);
     const searchedText = text.toLowerCase();
     const filteredEmojiDirectories: any = [];
     emojisDirectories.forEach((section: any) => {
@@ -36,15 +71,17 @@ const Button = () => {
     updateEmojis(value);
   };
 
-  const onSelectEmojiHandler = (emoji: string) => {
-    const textField: any = document.getElementById('new_comment_field');
+  const onSelectEmojiHandler = (emoji) => {
+    // const textField: any = document.getElementById('new_comment_field');
+    const textField: any = allTextAreasArray[index];
     if (textField) {
-      textField.value += emoji;
+      textField.value += emoji.value;
+      setRecentEmojis(emoji);
     }
   };
 
   const onClicEmoji = () => {
-    isPopoverOpen && document.getElementById('new_comment_field')?.focus();
+    isPopoverOpen && allTextAreasArray[index]?.focus();
     setIsPopoverOpen(!isPopoverOpen);
   };
 
@@ -56,7 +93,7 @@ const Button = () => {
       reposition={false}
       onClickOutside={() => {
         setIsPopoverOpen(false);
-        document.getElementById('new_comment_field')?.focus();
+        allTextAreasArray[index]?.focus();
       }}
       content={({ position, nudgedLeft, nudgedTop }) => (
         <div className="gh_emoji_container">
@@ -78,17 +115,18 @@ const Button = () => {
             {emojisDirectoriesState.length === 0 ? (
               <p>No emoji found.</p>
             ) : (
-              emojisDirectoriesState.map((section) => {
-                return (
+              <>
+                {!searchTerm && recentsEmojis?.length > 0 && (
                   <>
-                    <p className="title" id={`gh_emoji_${section.link}`}>
-                      <span>{section.title}</span>
+                    <p className="title" id={`gh_emoji_recents`}>
+                      <span>RECENTS</span>
                     </p>
                     <div className="emojis">
-                      {section.emojis?.map((item) => {
+                      {recentsEmojis?.map((item, index) => {
                         return (
                           <button
-                            onClick={() => onSelectEmojiHandler(item.value)}
+                            key={`recents_emojis_${index}`}
+                            onClick={() => onSelectEmojiHandler(item)}
                           >
                             {item.value}
                           </button>
@@ -96,8 +134,29 @@ const Button = () => {
                       })}
                     </div>
                   </>
-                );
-              })
+                )}
+                {emojisDirectoriesState.map((section) => {
+                  return (
+                    <>
+                      <p className="title" id={`gh_emoji_${section.link}`}>
+                        <span>{section.title}</span>
+                      </p>
+                      <div className="emojis">
+                        {section.emojis?.map((item, index) => {
+                          return (
+                            <button
+                              key={index}
+                              onClick={() => onSelectEmojiHandler(item)}
+                            >
+                              {item.value}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </>
+                  );
+                })}
+              </>
             )}
           </div>
 

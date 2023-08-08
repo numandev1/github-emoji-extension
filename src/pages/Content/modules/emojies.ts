@@ -6320,4 +6320,3 @@ export const emojisDirectories = [
     ],
   },
 ];
-console.log(emojisDirectories, 'emojisDirectories');
