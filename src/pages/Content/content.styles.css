@@ -3,23 +3,23 @@
   background-color: rgb(250, 249, 249);
   padding: 10px;
   border: 1px solid #DDD;
+  position: relative;
+  z-index: 999999 !important;
 }
 
 
-#gh_emoji_input_search,
-#gh_emoji_input_output {
+#gh_emoji_input_search {
   width: 100%;
-  padding: 5px 10px;
+  padding: 2px 2px;
   padding-left: 30px;
   border-radius: 30px;
-  font-size: 15px;
+  font-size: 13px;
   color: #333;
   border: 1px solid #DDD;
   background-color: rgb(231, 231, 231);
 }
 
-#gh_emoji_input_search::placeholder,
-#gh_emoji_input_output::placeholder {
+#gh_emoji_input_search::placeholder {
   color: rgb(199, 198, 198);
 }
 
@@ -29,15 +29,18 @@
 
 .gh_emoji_search_icon {
   position: absolute;
-  left: 9px;
-  top: 7px;
-  height: 17px;
-  width: 17px;
+  left: 12px;
+  top: 5px;
+  height: 15px;
+  width: 15px;
 }
 
 .gh_emoji_input-wrapper {
   padding-bottom: 10px;
   background-color: rgb(250, 249, 249);
+
+  flex-direction: row;
+  align-items: center;
 }
 
 #gh_emoji_input_output {
@@ -48,7 +51,7 @@
 .gh_emoji_shortcut-wrapper {
   display: flex;
   background-color: rgb(250, 249, 249);
-  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .gh_emoji_shortcut-wrapper a img {
@@ -70,16 +73,15 @@
 }
 
 .gh_emoji_directory-wrapper {
-  padding: 0px 10px;
   max-height: 250px;
   overflow-y: auto;
 }
 
-.gh_emoji_directory-wrapper .gh_emoji_title {
+.gh_emoji_directory-wrapper .title {
   color: #666;
   text-transform: uppercase;
   display: flex;
-  font-size: 13px;
+  font-size: 11px;
   letter-spacing: 0px;
 
   margin-bottom: 5px;
@@ -91,6 +93,7 @@
   align-items: center;
   flex-wrap: wrap;
   padding-bottom: 10px;
+  font-size: 11px;
 }
 
 .gh_emoji_directory-wrapper .gh_emoji_emojis button {
@@ -199,4 +202,8 @@
 .gh_emoji_directory-wrapper .emojis input:focus {
   outline: none;
   border-width: 0px;
+}
+
+.popover-container {
+  z-index: 99999999999;
 }

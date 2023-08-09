@@ -5,6 +5,7 @@ interface EmojiObjectType {
   terms: string;
 }
 
+//@ts-ignore
 let callbackRegister = null;
 
 export const setRecentEmojis = async (emoji: EmojiObjectType) => {
@@ -14,7 +15,7 @@ export const setRecentEmojis = async (emoji: EmojiObjectType) => {
     allRecentEmojis.splice(index, 1);
     allRecentEmojis.unshift(emoji);
   } else {
-    if (allRecentEmojis.length >= 10) {
+    if (allRecentEmojis.length >= 12) {
       allRecentEmojis.pop();
       allRecentEmojis.unshift(emoji);
     } else {
@@ -22,6 +23,7 @@ export const setRecentEmojis = async (emoji: EmojiObjectType) => {
     }
   }
   await chrome.storage.sync.set({ [key]: allRecentEmojis });
+  //@ts-ignore
   callbackRegister && callbackRegister(allRecentEmojis);
 };
 
