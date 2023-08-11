@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Popover, ArrowContainer } from 'react-tiny-popover';
 import { SVG } from './SVGs';
 import { emojisDirectories } from '../modules/emojies';
@@ -10,6 +10,7 @@ import {
 import useDebouncedCallback from '../modules/useDebouncedCallback';
 import { insertAtCursor } from '../modules/helper';
 const Button = ({ textArea }: { textArea: Element }) => {
+  const inputRef = useRef();
   const [searchTerm, setSearchTerm] = useState('');
   const [recentsEmojis, setRecentsEmojis] = useState([]);
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
@@ -34,7 +35,14 @@ const Button = ({ textArea }: { textArea: Element }) => {
       });
   };
 
+  // useEffect()
+
   useEffect(() => {
+    if (isPopoverOpen) {
+      setTimeout(() => {
+        inputRef.current?.focus();
+      }, 0);
+    }
     isPopoverOpen && setEmojisDirectoriesState(emojisDirectories);
     isPopoverOpen && getRecentEmojiHandler();
   }, [isPopoverOpen]);
@@ -46,6 +54,11 @@ const Button = ({ textArea }: { textArea: Element }) => {
       //@ts-ignore
       if (evtobj.ctrlKey || (evtobj.metaKey && evtobj.keyCode === 191))
         setIsPopoverOpen(!isPopoverOpen);
+      if (isPopoverOpen) {
+        setTimeout(() => {
+          textArea?.focus();
+        }, 0);
+      }
     };
 
     window.addEventListener('keydown', handleUserKeyPress);
@@ -122,6 +135,7 @@ const Button = ({ textArea }: { textArea: Element }) => {
                 alt="search icon"
               />
               <input
+                ref={inputRef}
                 id="gh_emoji_input_search"
                 placeholder="Search emoji..."
                 onChange={onSearch}
