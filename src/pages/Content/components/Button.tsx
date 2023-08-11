@@ -40,8 +40,19 @@ const Button = ({ textArea }: { textArea: Element }) => {
   }, [isPopoverOpen]);
 
   useEffect(() => {
-    // getRecentEmojiHandler();
-  }, []);
+    const handleUserKeyPress = (e: KeyboardEvent) => {
+      //@ts-ignore
+      var evtobj = window.event ? window.event : e;
+      //@ts-ignore
+      if (evtobj.ctrlKey || (evtobj.metaKey && evtobj.keyCode === 191))
+        setIsPopoverOpen(!isPopoverOpen);
+    };
+
+    window.addEventListener('keydown', handleUserKeyPress);
+    return () => {
+      window.removeEventListener('keydown', handleUserKeyPress);
+    };
+  }, [isPopoverOpen]);
 
   const updateEmojis = useDebouncedCallback((text: string) => {
     setSearchTerm(text);
