@@ -47,12 +47,19 @@ const Button = ({ textArea }: { textArea: Element }) => {
       //@ts-ignore
       var evtobj = window.event ? window.event : e;
       //@ts-ignore
-      if (evtobj.ctrlKey || (evtobj.metaKey && evtobj.keyCode === 191))
+      if (evtobj.ctrlKey || (evtobj.metaKey && evtobj.keyCode === 191)) {
         setIsPopoverOpen(!isPopoverOpen);
-      if (isPopoverOpen) {
-        setTimeout(() => {
-          textArea?.focus();
-        }, 0);
+        if (!isPopoverOpen) {
+          setTimeout(() => {
+            textArea?.focus();
+          }, 0);
+        }
+      } else if (
+        evtobj.key === 'Escape' ||
+        evtobj.key === 'Enter' ||
+        evtobj.keyCode === 13
+      ) {
+        setIsPopoverOpen(false);
       }
     };
 
