@@ -37,21 +37,11 @@ const loadContent = () => {
 };
 loadContent();
 
-window.addEventListener('transitionend', (event) => {
-  if (
-    event.type === 'transitionend' &&
-    //@ts-ignore
-    event?.target?.getAttribute('class') === 'turbo-progress-bar' &&
-    event?.propertyName === 'opacity'
-  ) {
-    loadContent();
-  }
-});
-
 //@ts-ignore
 document.arrive(
   'tab-container.js-previewable-comment-form',
   function (newElem: Element) {
+    console.log('new arrie');
     const tabHeader = newElem.querySelector('div.tabnav-tabs[role="tablist"]');
     const textArea = newElem.querySelector('textarea[name="comment[body]"]');
     if (tabHeader && textArea) {

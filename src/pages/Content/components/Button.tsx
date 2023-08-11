@@ -8,7 +8,7 @@ import {
   setRecentEmojis,
 } from '../storage/index';
 import useDebouncedCallback from '../modules/useDebouncedCallback';
-
+import { insertAtCursor } from '../modules/helper';
 const Button = ({ textArea }: { textArea: Element }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [recentsEmojis, setRecentsEmojis] = useState([]);
@@ -68,10 +68,9 @@ const Button = ({ textArea }: { textArea: Element }) => {
   };
 
   const onSelectEmojiHandler = (emoji) => {
-    // const textField: any = document.getElementById('new_comment_field');
     const textField: any = textArea;
     if (textField) {
-      textField.value += emoji.value;
+      insertAtCursor(textField, emoji.value);
       setRecentEmojis(emoji);
     }
   };
