@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Button from './components/Button';
+import RecentEmojis from './storage/index';
+
 import 'arrive';
+RecentEmojis.init();
 
 const EMOJI_SPAN_CLASS = 'github_emoji';
 const buttonSpan = document.createElement('span');
@@ -42,6 +45,7 @@ document.arrive(
   'tab-container.js-previewable-comment-form',
   function (newElem: Element) {
     console.log('new arrie');
+    RecentEmojis.init();
     const tabHeader = newElem.querySelector('div.tabnav-tabs[role="tablist"]');
     const textArea = newElem.querySelector('textarea[name="comment[body]"]');
     if (tabHeader && textArea) {

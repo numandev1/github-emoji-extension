@@ -2,50 +2,45 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Popover, ArrowContainer } from 'react-tiny-popover';
 import { SVG } from './SVGs';
 import { emojisDirectories } from '../modules/emojies';
-import {
-  getRecentsEmojis,
-  getRecentsEmojisLisner,
-  setRecentEmojis,
-} from '../storage/index';
+import RecentEmojis, { recents_emojis_key } from '../storage/index';
 import useDebouncedCallback from '../modules/useDebouncedCallback';
 import { insertAtCursor } from '../modules/helper';
 const Button = ({ textArea }: { textArea: Element }) => {
   const inputRef = useRef();
   const [searchTerm, setSearchTerm] = useState('');
-  const [recentsEmojis, setRecentsEmojis] = useState([]);
+  const [recentsEmojis, setRecentsEmojis] = useState(
+    RecentEmojis.recentEmojis[recents_emojis_key]
+  );
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
 
   const [emojisDirectoriesState, setEmojisDirectoriesState] =
     useState(emojisDirectories);
-
-  const getRecentEmojiHandler = () => {
-    getRecentsEmojisLisner((result: any[]) => {
-      if (result.length > 0) {
-        setRecentsEmojis(result);
-      }
-    });
-    getRecentsEmojis()
-      .then((result: any[]) => {
-        if (result.length > 0) {
-          setRecentsEmojis(result);
-        }
-      })
-      .catch((error) => {
-        console.log('error=>', error);
-      });
-  };
-
-  // useEffect()
 
   useEffect(() => {
     if (isPopoverOpen) {
       setTimeout(() => {
         inputRef.current?.focus();
       }, 0);
+      setEmojisDirectoriesState(emojisDirectories);
     }
-    isPopoverOpen && setEmojisDirectoriesState(emojisDirectories);
-    isPopoverOpen && getRecentEmojiHandler();
   }, [isPopoverOpen]);
+
+  useEffect(() => {
+    RecentEmojis.initEmojiListener(() => {
+      setRecentsEmojis(RecentEmojis.recentEmojis[recents_emojis_key]);
+    });
+    chrome.storage.sync.onChanged.addListener(() => {
+      RecentEmojis.getRecentsEmojis()
+        .then((result: any[]) => {
+          if (result.length > 0) {
+            setRecentsEmojis(result);
+          }
+        })
+        .catch((error) => {
+          console.log('error=>', error);
+        });
+    });
+  }, []);
 
   useEffect(() => {
     const handleUserKeyPress = (e: KeyboardEvent) => {
@@ -95,7 +90,7 @@ const Button = ({ textArea }: { textArea: Element }) => {
     const textField: any = textArea;
     if (textField) {
       insertAtCursor(textField, emoji.value);
-      setRecentEmojis(emoji);
+      RecentEmojis.setRecentEmojis(emoji);
     }
   };
 
@@ -111,9 +106,9 @@ const Button = ({ textArea }: { textArea: Element }) => {
       containerClassName="popover-container"
       padding={10}
       reposition={false}
-      onClickOutside={() => {
+      onClickOutside={(e) => {
         setIsPopoverOpen(false);
-        textArea?.focus();
+        if (e.target?.localName !== 'textarea') textArea?.focus();
       }}
       content={({ position, childRect, popoverRect }) => (
         <ArrowContainer // if you'd like an arrow, you can import the ArrowContainer!
