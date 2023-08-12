@@ -25,6 +25,7 @@ const addEmojiButtonIntoElement = (element: Element, textArea: Element) => {
   );
 };
 
+// for issues
 const loadContent = () => {
   const markdownTagElement = Array.from(
     document.querySelectorAll('tab-container.js-previewable-comment-form')
@@ -40,14 +41,32 @@ const loadContent = () => {
 };
 loadContent();
 
+// for PR reviews
 //@ts-ignore
 document.arrive(
   'tab-container.js-previewable-comment-form',
   function (newElem: Element) {
-    console.log('new arrie');
     RecentEmojis.init();
     const tabHeader = newElem.querySelector('div.tabnav-tabs[role="tablist"]');
     const textArea = newElem.querySelector('textarea[name="comment[body]"]');
+    if (tabHeader && textArea) {
+      addEmojiButtonIntoElement(tabHeader, textArea);
+    }
+  }
+);
+
+//for github project page
+//@ts-ignore
+document.arrive(
+  'div[data-testid="markdown-editor"]',
+  function (newElem: Element) {
+    console.log('new arrive', window.location, 'ss');
+    RecentEmojis.init();
+    const tabHeader = newElem.querySelector('header :first-child');
+    const textArea = newElem.querySelector(
+      'textarea[aria-label="Markdown value"]'
+    );
+    console.log(tabHeader, 'tabHeader', textArea);
     if (tabHeader && textArea) {
       addEmojiButtonIntoElement(tabHeader, textArea);
     }

@@ -219,3 +219,9 @@ button:focus,
 input:focus {
   outline: none;
 }
+
+.github_emoji {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
