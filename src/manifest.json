@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Github Emojis",
-  "description": "Use emojis in github Issues/PR",
+  "name": "Github Emoji",
+  "description": "Use emojis in Github Issues/PR",
   "options_page": "options.html",
   "background": { "service_worker": "background.bundle.js" },
   "action": {
@@ -16,11 +16,7 @@
   },
   "content_scripts": [
     {
-      "matches": [
-        "https://github.com/*",
-        "https://github.com/*/pull/*",
-        "https://github.com/*/issues/*"
-      ],
+      "matches": ["https://github.com/*"],
       "js": [
         "react/react.min.js",
         "react/react-dom.min.js",

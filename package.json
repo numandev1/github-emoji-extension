@@ -1,11 +1,11 @@
 {
-  "name": "github-emojis-chrome-extension",
+  "name": "github-emoji-extension",
   "version": "5.0.4",
   "description": "Use emojis in github Issues/PR",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/numandev1/github-emojis-chrome-extension.git"
+    "url": "https://github.com/numandev1/github-emoji-extension.git"
   },
   "scripts": {
     "build": "node utils/build.js",
