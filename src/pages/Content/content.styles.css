@@ -1,4 +1,4 @@
-.gh_emoji_container {
+.gh-emoji-container {
   width: 250px;
   background-color: rgb(250, 249, 249);
   padding: 10px;
@@ -8,7 +8,7 @@
 }
 
 
-#gh_emoji_input_search {
+#gh-emoji-input-search {
   width: 100%;
   padding: 2px 2px;
   padding-left: 30px;
@@ -16,26 +16,26 @@
   font-size: 13px;
   color: #333;
   border: 1px solid #DDD;
-  background-color: rgb(231, 231, 231);
+  background-color: rgb(245, 245, 245);
 }
 
-#gh_emoji_input_search::placeholder {
+#gh-emoji-input-search::placeholder {
   color: rgb(199, 198, 198);
 }
 
-.gh_emoji_input-wrapper {
+.gh-emoji-input-wrapper {
   position: relative;
 }
 
-.gh_emoji_search_icon {
+.gh-emoji-search-icon {
   position: absolute;
-  left: 12px;
-  top: 5px;
-  height: 15px;
-  width: 15px;
+  left: 10px;
+  top: 6px;
+  height: 13px;
+  width: 13px;
 }
 
-.gh_emoji_input-wrapper {
+.gh-emoji-input-wrapper {
   padding-bottom: 10px;
   background-color: rgb(250, 249, 249);
 
@@ -43,41 +43,41 @@
   align-items: center;
 }
 
-#gh_emoji_input_output {
+#gh-emoji-input-output {
   padding-left: 10px;
   margin-top: 5px;
 }
 
-.gh_emoji_shortcut-wrapper {
+.gh-emoji-shortcut-wrapper {
   display: flex;
   background-color: rgb(250, 249, 249);
   padding-bottom: 10px;
 }
 
-.gh_emoji_shortcut-wrapper a img {
+.gh-emoji-shortcut-wrapper a img {
   height: 15px;
   width: 15px;
   opacity: 0.7;
 }
 
-.gh_emoji_shortcut-wrapper a {
+.gh-emoji-shortcut-wrapper a {
   flex: 1;
   text-align: center;
   transform: scale(1);
   transition: all 0.25s;
 }
 
-.gh_emoji_shortcut-wrapper a:hover {
+.gh-emoji-shortcut-wrapper a:hover {
   transform: scale(1.1);
   transition: all 0.25s;
 }
 
-.gh_emoji_directory-wrapper {
+.gh-emoji-directory-wrapper {
   max-height: 250px;
   overflow-y: auto;
 }
 
-.gh_emoji_directory-wrapper .title {
+.gh-emoji-directory-wrapper .title {
   color: #666;
   text-transform: uppercase;
   display: flex;
@@ -88,7 +88,7 @@
   align-items: center;
 }
 
-.gh_emoji_directory-wrapper .gh_emoji_emojis {
+.gh-emoji-directory-wrapper .gh-emoji-emojis {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -96,7 +96,7 @@
   font-size: 11px;
 }
 
-.gh_emoji_directory-wrapper .gh_emoji_emojis button {
+.gh-emoji-directory-wrapper .gh-emoji-emojis button {
   border: 0px solid transparent;
   background-color: transparent;
   font-size: 25px;
@@ -113,23 +113,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
-.gh_emoji_directory-wrapper .gh_emoji_emojis button:hover {
+.gh-emoji-directory-wrapper .emojis button:hover {
   transform: scale(1.1);
   transition: all 0.25s;
   background-color: #DDD;
   border-radius: 4px;
 }
 
-.gh_emoji_directory-wrapper .gh_emoji_emojis button:active {
+.gh-emoji-directory-wrapper .emojis button:active {
   transform: scale(0.9);
   transition: all 0.25s;
 }
 
 
-.gh_emoji_no-result {
+.gh-emoji-no-result {
   color: #666;
   display: flex;
   font-size: 13px;
@@ -137,15 +136,15 @@
   margin-bottom: 5px;
 }
 
-.gh_emoji_no-result {
+.gh-emoji-no-result {
   display: block;
 }
 
-.gh_emoji_no-result a {
+.gh-emoji-no-result a {
   color: #20a0eb;
 }
 
-.gh_emoji_loading {
+.gh-emoji-loading {
   text-align: center;
   padding: 10px 0px;
 }
@@ -160,7 +159,7 @@
   }
 }
 
-.gh_emoji_loading img {
+.gh-emoji-loading img {
   opacity: 0.9;
   height: 30px;
   width: 30px;
@@ -168,14 +167,14 @@
 }
 
 
-.gh_emoji_directory-wrapper .emojis {
+.gh-emoji-directory-wrapper .emojis {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   padding-bottom: 10px;
 }
 
-.gh_emoji_directory-wrapper .emojis button {
+.gh-emoji-directory-wrapper .emojis button {
   border: 0px px solid transparent;
   background-color: transparent;
   font-size: 25px;
@@ -197,13 +196,26 @@
 }
 
 
-.gh_emoji_directory-wrapper .emojis textarea:focus,
-.gh_emoji_directory-wrapper .emojis button:focus,
-.gh_emoji_directory-wrapper .emojis input:focus {
+.gh-emoji-directory-wrapper .emojis textarea:focus,
+.gh-emoji-directory-wrapper .emojis button:focus,
+.gh-emoji-directory-wrapper .emojis input:focus {
   outline: none;
   border-width: 0px;
 }
 
 .popover-container {
   z-index: 99999999999;
+}
+
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+textarea:focus,
+button:focus,
+input:focus {
+  outline: none;
 }

@@ -6339,4 +6339,1842 @@ export const emojisDirectories = [
       },
     ],
   },
+  {
+    title: 'Others',
+    link: 'others',
+    emojis: [
+      {
+        value: '©️',
+        terms: ':copyright',
+      },
+      {
+        value: '®️',
+        terms: ':registered',
+      },
+      {
+        value: '🅰️',
+        terms: ':a',
+      },
+      {
+        value: '🅾️',
+        terms: ':o2',
+      },
+      {
+        value: '🅿️',
+        terms: ':parking',
+      },
+      {
+        value: '🈂️',
+        terms: ':sa',
+      },
+      {
+        value: '🈷️',
+        terms: ':u6708',
+      },
+      {
+        value: '🌡️',
+        terms: ':thermometer',
+      },
+      {
+        value: '🌤️',
+        terms: ':mostly_sunny',
+      },
+      {
+        value: '🌤️',
+        terms: ':sun_small_cloud',
+      },
+      {
+        value: '🌥️',
+        terms: ':barely_sunny',
+      },
+      {
+        value: '🌥️',
+        terms: ':sun_behind_cloud',
+      },
+      {
+        value: '🌦️',
+        terms: ':partly_sunny_rain',
+      },
+      {
+        value: '🌦️',
+        terms: ':sun_behind_rain_cloud',
+      },
+      {
+        value: '🌧️',
+        terms: ':rain_cloud',
+      },
+      {
+        value: '🌨️',
+        terms: ':snow_cloud',
+      },
+      {
+        value: '🌩️',
+        terms: ':lightning',
+      },
+      {
+        value: '🌩️',
+        terms: ':lightning_cloud',
+      },
+      {
+        value: '🌪️',
+        terms: ':tornado',
+      },
+      {
+        value: '🌪️',
+        terms: ':tornado_cloud',
+      },
+      {
+        value: '🌫️',
+        terms: ':fog',
+      },
+      {
+        value: '🌬️',
+        terms: ':wind_blowing_face',
+      },
+      {
+        value: '🌶️',
+        terms: ':hot_pepper',
+      },
+      {
+        value: '🍽️',
+        terms: ':knife_fork_plate',
+      },
+      {
+        value: '🎖️',
+        terms: ':medal',
+      },
+      {
+        value: '🎗️',
+        terms: ':reminder_ribbon',
+      },
+      {
+        value: '🎙️',
+        terms: ':studio_microphone',
+      },
+      {
+        value: '🎚️',
+        terms: ':level_slider',
+      },
+      {
+        value: '🎛️',
+        terms: ':control_knobs',
+      },
+      {
+        value: '🎞️',
+        terms: ':film_frames',
+      },
+      {
+        value: '🎟️',
+        terms: ':admission_tickets',
+      },
+      {
+        value: '🏍️',
+        terms: ':racing_motorcycle',
+      },
+      {
+        value: '🏎️',
+        terms: ':racing_car',
+      },
+      {
+        value: '🏔️',
+        terms: ':snow_capped_mountain',
+      },
+      {
+        value: '🏕️',
+        terms: ':camping',
+      },
+      {
+        value: '🏖️',
+        terms: ':beach_with_umbrella',
+      },
+      {
+        value: '🏗️',
+        terms: ':building_construction',
+      },
+      {
+        value: '🏘️',
+        terms: ':house_buildings',
+      },
+      {
+        value: '🏙️',
+        terms: ':cityscape',
+      },
+      {
+        value: '🏚️',
+        terms: ':derelict_house_building',
+      },
+      {
+        value: '🏛️',
+        terms: ':classical_building',
+      },
+      {
+        value: '🏜️',
+        terms: ':desert',
+      },
+      {
+        value: '🏝️',
+        terms: ':desert_island',
+      },
+      {
+        value: '🏞️',
+        terms: ':national_park',
+      },
+      {
+        value: '🏟️',
+        terms: ':stadium',
+      },
+      {
+        value: '🏳️‍⚧️',
+        terms: ':transgender_flag',
+      },
+      {
+        value: '🏳️',
+        terms: ':waving_white_flag',
+      },
+      {
+        value: '🏵️',
+        terms: ':rosette',
+      },
+      {
+        value: '🏷️',
+        terms: ':label',
+      },
+      {
+        value: '🏻',
+        terms: ':skin-tone-2',
+      },
+      {
+        value: '🏼',
+        terms: ':skin-tone-3',
+      },
+      {
+        value: '🏽',
+        terms: ':skin-tone-4',
+      },
+      {
+        value: '🏾',
+        terms: ':skin-tone-5',
+      },
+      {
+        value: '🏿',
+        terms: ':skin-tone-6',
+      },
+      {
+        value: '🐈‍⬛',
+        terms: ':black_cat',
+      },
+      {
+        value: '🐕‍🦺',
+        terms: ':service_dog',
+      },
+      {
+        value: '🐻‍❄️',
+        terms: ':polar_bear',
+      },
+      {
+        value: '🐿️',
+        terms: ':chipmunk',
+      },
+      {
+        value: '👁️',
+        terms: ':eye',
+      },
+      {
+        value: '👨‍🍼',
+        terms: ':man_feeding_baby',
+      },
+      {
+        value: '👨‍🦯',
+        terms: ':man_with_probing_cane',
+      },
+      {
+        value: '👨‍🦰',
+        terms: ':red_haired_man',
+      },
+      {
+        value: '👨‍🦱',
+        terms: ':curly_haired_man',
+      },
+      {
+        value: '👨‍🦲',
+        terms: ':bald_man',
+      },
+      {
+        value: '👨‍🦳',
+        terms: ':white_haired_man',
+      },
+      {
+        value: '👨‍🦼',
+        terms: ':man_in_motorized_wheelchair',
+      },
+      {
+        value: '👨‍🦽',
+        terms: ':man_in_manual_wheelchair',
+      },
+      {
+        value: '👩‍🍼',
+        terms: ':woman_feeding_baby',
+      },
+      {
+        value: '👩‍🦯',
+        terms: ':woman_with_probing_cane',
+      },
+      {
+        value: '👩‍🦰',
+        terms: ':red_haired_woman',
+      },
+      {
+        value: '👩‍🦱',
+        terms: ':curly_haired_woman',
+      },
+      {
+        value: '👩‍🦲',
+        terms: ':bald_woman',
+      },
+      {
+        value: '👩‍🦳',
+        terms: ':white_haired_woman',
+      },
+      {
+        value: '👩‍🦼',
+        terms: ':woman_in_motorized_wheelchair',
+      },
+      {
+        value: '👩‍🦽',
+        terms: ':woman_in_manual_wheelchair',
+      },
+      {
+        value: '👰‍♀️',
+        terms: ':woman_with_veil',
+      },
+      {
+        value: '👰‍♂️',
+        terms: ':man_with_veil',
+      },
+      {
+        value: '📽️',
+        terms: ':film_projector',
+      },
+      {
+        value: '🕉️',
+        terms: ':om_symbol',
+      },
+      {
+        value: '🕊️',
+        terms: ':dove_of_peace',
+      },
+      {
+        value: '🕯️',
+        terms: ':candle',
+      },
+      {
+        value: '🕰️',
+        terms: ':mantelpiece_clock',
+      },
+      {
+        value: '🕳️',
+        terms: ':hole',
+      },
+      {
+        value: '🕴️',
+        terms: ':man_in_business_suit_levitating',
+      },
+      {
+        value: '🕶️',
+        terms: ':dark_sunglasses',
+      },
+      {
+        value: '🕷️',
+        terms: ':spider',
+      },
+      {
+        value: '🕸️',
+        terms: ':spider_web',
+      },
+      {
+        value: '🕹️',
+        terms: ':joystick',
+      },
+      {
+        value: '🖇️',
+        terms: ':linked_paperclips',
+      },
+      {
+        value: '🖊️',
+        terms: ':lower_left_ballpoint_pen',
+      },
+      {
+        value: '🖋️',
+        terms: ':lower_left_fountain_pen',
+      },
+      {
+        value: '🖌️',
+        terms: ':lower_left_paintbrush',
+      },
+      {
+        value: '🖍️',
+        terms: ':lower_left_crayon',
+      },
+      {
+        value: '🖐️',
+        terms: ':raised_hand_with_fingers_splayed',
+      },
+      {
+        value: '🖥️',
+        terms: ':desktop_computer',
+      },
+      {
+        value: '🖨️',
+        terms: ':printer',
+      },
+      {
+        value: '🖱️',
+        terms: ':three_button_mouse',
+      },
+      {
+        value: '🖲️',
+        terms: ':trackball',
+      },
+      {
+        value: '🖼️',
+        terms: ':frame_with_picture',
+      },
+      {
+        value: '🗂️',
+        terms: ':card_index_dividers',
+      },
+      {
+        value: '🗃️',
+        terms: ':card_file_box',
+      },
+      {
+        value: '🗄️',
+        terms: ':file_cabinet',
+      },
+      {
+        value: '🗑️',
+        terms: ':wastebasket',
+      },
+      {
+        value: '🗒️',
+        terms: ':spiral_note_pad',
+      },
+      {
+        value: '🗓️',
+        terms: ':spiral_calendar_pad',
+      },
+      {
+        value: '🗝️',
+        terms: ':old_key',
+      },
+      {
+        value: '🗞️',
+        terms: ':rolled_up_newspaper',
+      },
+      {
+        value: '🗡️',
+        terms: ':dagger_knife',
+      },
+      {
+        value: '🗣️',
+        terms: ':speaking_head_in_silhouette',
+      },
+      {
+        value: '🗨️',
+        terms: ':left_speech_bubble',
+      },
+      {
+        value: '🗯️',
+        terms: ':right_anger_bubble',
+      },
+      {
+        value: '🗳️',
+        terms: ':ballot_box_with_ballot',
+      },
+      {
+        value: '🗺️',
+        terms: ':world_map',
+      },
+      {
+        value: '😮‍💨',
+        terms: ':face_exhaling',
+      },
+      {
+        value: '😵‍💫',
+        terms: ':face_with_spiral_eyes',
+      },
+      {
+        value: '😶‍🌫️',
+        terms: ':face_in_clouds',
+      },
+      {
+        value: '🛋️',
+        terms: ':couch_and_lamp',
+      },
+      {
+        value: '🛍️',
+        terms: ':shopping_bags',
+      },
+      {
+        value: '🛎️',
+        terms: ':bellhop_bell',
+      },
+      {
+        value: '🛏️',
+        terms: ':bed',
+      },
+      {
+        value: '🛕',
+        terms: ':hindu_temple',
+      },
+      {
+        value: '🛖',
+        terms: ':hut',
+      },
+      {
+        value: '🛗',
+        terms: ':elevator',
+      },
+      {
+        value: '🛠️',
+        terms: ':hammer_and_wrench',
+      },
+      {
+        value: '🛡️',
+        terms: ':shield',
+      },
+      {
+        value: '🛢️',
+        terms: ':oil_drum',
+      },
+      {
+        value: '🛣️',
+        terms: ':motorway',
+      },
+      {
+        value: '🛤️',
+        terms: ':railway_track',
+      },
+      {
+        value: '🛥️',
+        terms: ':motor_boat',
+      },
+      {
+        value: '🛩️',
+        terms: ':small_airplane',
+      },
+      {
+        value: '🛰️',
+        terms: ':satellite',
+      },
+      {
+        value: '🛳️',
+        terms: ':passenger_ship',
+      },
+      {
+        value: '🛹',
+        terms: ':skateboard',
+      },
+      {
+        value: '🛺',
+        terms: ':auto_rickshaw',
+      },
+      {
+        value: '🛻',
+        terms: ':pickup_truck',
+      },
+      {
+        value: '🛼',
+        terms: ':roller_skate',
+      },
+      {
+        value: '🟠',
+        terms: ':large_orange_circle',
+      },
+      {
+        value: '🟡',
+        terms: ':large_yellow_circle',
+      },
+      {
+        value: '🟢',
+        terms: ':large_green_circle',
+      },
+      {
+        value: '🟣',
+        terms: ':large_purple_circle',
+      },
+      {
+        value: '🟤',
+        terms: ':large_brown_circle',
+      },
+      {
+        value: '🟥',
+        terms: ':large_red_square',
+      },
+      {
+        value: '🟦',
+        terms: ':large_blue_square',
+      },
+      {
+        value: '🟧',
+        terms: ':large_orange_square',
+      },
+      {
+        value: '🟨',
+        terms: ':large_yellow_square',
+      },
+      {
+        value: '🟩',
+        terms: ':large_green_square',
+      },
+      {
+        value: '🟪',
+        terms: ':large_purple_square',
+      },
+      {
+        value: '🟫',
+        terms: ':large_brown_square',
+      },
+      {
+        value: '🤌',
+        terms: ':pinched_fingers',
+      },
+      {
+        value: '🤍',
+        terms: ':white_heart',
+      },
+      {
+        value: '🤎',
+        terms: ':brown_heart',
+      },
+      {
+        value: '🤏',
+        terms: ':pinching_hand',
+      },
+      {
+        value: '🤵‍♀️',
+        terms: ':woman_in_tuxedo',
+      },
+      {
+        value: '🤵‍♂️',
+        terms: ':man_in_tuxedo',
+      },
+      {
+        value: '🤿',
+        terms: ':diving_mask',
+      },
+      {
+        value: '🥍',
+        terms: ':lacrosse',
+      },
+      {
+        value: '🥎',
+        terms: ':softball',
+      },
+      {
+        value: '🥏',
+        terms: ':flying_disc',
+      },
+      {
+        value: '🥬',
+        terms: ':leafy_green',
+      },
+      {
+        value: '🥭',
+        terms: ':mango',
+      },
+      {
+        value: '🥮',
+        terms: ':moon_cake',
+      },
+      {
+        value: '🥯',
+        terms: ':bagel',
+      },
+      {
+        value: '🥰',
+        terms: ':smiling_face_with_3_hearts',
+      },
+      {
+        value: '🥱',
+        terms: ':yawning_face',
+      },
+      {
+        value: '🥲',
+        terms: ':smiling_face_with_tear',
+      },
+      {
+        value: '🥳',
+        terms: ':partying_face',
+      },
+      {
+        value: '🥴',
+        terms: ':woozy_face',
+      },
+      {
+        value: '🥵',
+        terms: ':hot_face',
+      },
+      {
+        value: '🥶',
+        terms: ':cold_face',
+      },
+      {
+        value: '🥷',
+        terms: ':ninja',
+      },
+      {
+        value: '🥸',
+        terms: ':disguised_face',
+      },
+      {
+        value: '🥺',
+        terms: ':pleading_face',
+      },
+      {
+        value: '🥻',
+        terms: ':sari',
+      },
+      {
+        value: '🥼',
+        terms: ':lab_coat',
+      },
+      {
+        value: '🥽',
+        terms: ':goggles',
+      },
+      {
+        value: '🥾',
+        terms: ':hiking_boot',
+      },
+      {
+        value: '🥿',
+        terms: ':womans_flat_shoe',
+      },
+      {
+        value: '🦘',
+        terms: ':kangaroo',
+      },
+      {
+        value: '🦙',
+        terms: ':llama',
+      },
+      {
+        value: '🦚',
+        terms: ':peacock',
+      },
+      {
+        value: '🦛',
+        terms: ':hippopotamus',
+      },
+      {
+        value: '🦜',
+        terms: ':parrot',
+      },
+      {
+        value: '🦝',
+        terms: ':raccoon',
+      },
+      {
+        value: '🦞',
+        terms: ':lobster',
+      },
+      {
+        value: '🦟',
+        terms: ':mosquito',
+      },
+      {
+        value: '🦠',
+        terms: ':microbe',
+      },
+      {
+        value: '🦡',
+        terms: ':badger',
+      },
+      {
+        value: '🦢',
+        terms: ':swan',
+      },
+      {
+        value: '🦣',
+        terms: ':mammoth',
+      },
+      {
+        value: '🦤',
+        terms: ':dodo',
+      },
+      {
+        value: '🦥',
+        terms: ':sloth',
+      },
+      {
+        value: '🦦',
+        terms: ':otter',
+      },
+      {
+        value: '🦧',
+        terms: ':orangutan',
+      },
+      {
+        value: '🦨',
+        terms: ':skunk',
+      },
+      {
+        value: '🦩',
+        terms: ':flamingo',
+      },
+      {
+        value: '🦪',
+        terms: ':oyster',
+      },
+      {
+        value: '🦫',
+        terms: ':beaver',
+      },
+      {
+        value: '🦬',
+        terms: ':bison',
+      },
+      {
+        value: '🦭',
+        terms: ':seal',
+      },
+      {
+        value: '🦮',
+        terms: ':guide_dog',
+      },
+      {
+        value: '🦯',
+        terms: ':probing_cane',
+      },
+      {
+        value: '🦴',
+        terms: ':bone',
+      },
+      {
+        value: '🦵',
+        terms: ':leg',
+      },
+      {
+        value: '🦶',
+        terms: ':foot',
+      },
+      {
+        value: '🦷',
+        terms: ':tooth',
+      },
+      {
+        value: '🦸‍♀️',
+        terms: ':female_superhero',
+      },
+      {
+        value: '🦸‍♂️',
+        terms: ':male_superhero',
+      },
+      {
+        value: '🦸',
+        terms: ':superhero',
+      },
+      {
+        value: '🦹‍♀️',
+        terms: ':female_supervillain',
+      },
+      {
+        value: '🦹‍♂️',
+        terms: ':male_supervillain',
+      },
+      {
+        value: '🦹',
+        terms: ':supervillain',
+      },
+      {
+        value: '🦺',
+        terms: ':safety_vest',
+      },
+      {
+        value: '🦻',
+        terms: ':ear_with_hearing_aid',
+      },
+      {
+        value: '🦼',
+        terms: ':motorized_wheelchair',
+      },
+      {
+        value: '🦽',
+        terms: ':manual_wheelchair',
+      },
+      {
+        value: '🦾',
+        terms: ':mechanical_arm',
+      },
+      {
+        value: '🦿',
+        terms: ':mechanical_leg',
+      },
+      {
+        value: '🧁',
+        terms: ':cupcake',
+      },
+      {
+        value: '🧂',
+        terms: ':salt',
+      },
+      {
+        value: '🧃',
+        terms: ':beverage_box',
+      },
+      {
+        value: '🧄',
+        terms: ':garlic',
+      },
+      {
+        value: '🧅',
+        terms: ':onion',
+      },
+      {
+        value: '🧆',
+        terms: ':falafel',
+      },
+      {
+        value: '🧇',
+        terms: ':waffle',
+      },
+      {
+        value: '🧈',
+        terms: ':butter',
+      },
+      {
+        value: '🧉',
+        terms: ':mate_drink',
+      },
+      {
+        value: '🧊',
+        terms: ':ice_cube',
+      },
+      {
+        value: '🧋',
+        terms: ':bubble_tea',
+      },
+      {
+        value: '🧍‍♀️',
+        terms: ':woman_standing',
+      },
+      {
+        value: '🧍‍♂️',
+        terms: ':man_standing',
+      },
+      {
+        value: '🧍',
+        terms: ':standing_person',
+      },
+      {
+        value: '🧎‍♀️',
+        terms: ':woman_kneeling',
+      },
+      {
+        value: '🧎‍♂️',
+        terms: ':man_kneeling',
+      },
+      {
+        value: '🧎',
+        terms: ':kneeling_person',
+      },
+      {
+        value: '🧏‍♀️',
+        terms: ':deaf_woman',
+      },
+      {
+        value: '🧏‍♂️',
+        terms: ':deaf_man',
+      },
+      {
+        value: '🧏',
+        terms: ':deaf_person',
+      },
+      {
+        value: '🧑‍🌾',
+        terms: ':farmer',
+      },
+      {
+        value: '🧑‍🍳',
+        terms: ':cook',
+      },
+      {
+        value: '🧑‍🍼',
+        terms: ':person_feeding_baby',
+      },
+      {
+        value: '🧑‍🎄',
+        terms: ':mx_claus',
+      },
+      {
+        value: '🧑‍🎓',
+        terms: ':student',
+      },
+      {
+        value: '🧑‍🎤',
+        terms: ':singer',
+      },
+      {
+        value: '🧑‍🎨',
+        terms: ':artist',
+      },
+      {
+        value: '🧑‍🏫',
+        terms: ':teacher',
+      },
+      {
+        value: '🧑‍🏭',
+        terms: ':factory_worker',
+      },
+      {
+        value: '🧑‍💻',
+        terms: ':technologist',
+      },
+      {
+        value: '🧑‍💼',
+        terms: ':office_worker',
+      },
+      {
+        value: '🧑‍🔧',
+        terms: ':mechanic',
+      },
+      {
+        value: '🧑‍🔬',
+        terms: ':scientist',
+      },
+      {
+        value: '🧑‍🚀',
+        terms: ':astronaut',
+      },
+      {
+        value: '🧑‍🚒',
+        terms: ':firefighter',
+      },
+      {
+        value: '🧑‍🤝‍🧑',
+        terms: ':people_holding_hands',
+      },
+      {
+        value: '🧑‍🦯',
+        terms: ':person_with_probing_cane',
+      },
+      {
+        value: '🧑‍🦰',
+        terms: ':red_haired_person',
+      },
+      {
+        value: '🧑‍🦱',
+        terms: ':curly_haired_person',
+      },
+      {
+        value: '🧑‍🦲',
+        terms: ':bald_person',
+      },
+      {
+        value: '🧑‍🦳',
+        terms: ':white_haired_person',
+      },
+      {
+        value: '🧑‍🦼',
+        terms: ':person_in_motorized_wheelchair',
+      },
+      {
+        value: '🧑‍🦽',
+        terms: ':person_in_manual_wheelchair',
+      },
+      {
+        value: '🧑‍⚕️',
+        terms: ':health_worker',
+      },
+      {
+        value: '🧑‍⚖️',
+        terms: ':judge',
+      },
+      {
+        value: '🧑‍✈️',
+        terms: ':pilot',
+      },
+      {
+        value: '🧔‍♀️',
+        terms: ':woman_with_beard',
+      },
+      {
+        value: '🧔‍♂️',
+        terms: ':man_with_beard',
+      },
+      {
+        value: '🧧',
+        terms: ':red_envelope',
+      },
+      {
+        value: '🧨',
+        terms: ':firecracker',
+      },
+      {
+        value: '🧩',
+        terms: ':jigsaw',
+      },
+      {
+        value: '🧪',
+        terms: ':test_tube',
+      },
+      {
+        value: '🧫',
+        terms: ':petri_dish',
+      },
+      {
+        value: '🧬',
+        terms: ':dna',
+      },
+      {
+        value: '🧭',
+        terms: ':compass',
+      },
+      {
+        value: '🧯',
+        terms: ':fire_extinguisher',
+      },
+      {
+        value: '🧰',
+        terms: ':toolbox',
+      },
+      {
+        value: '🧱',
+        terms: ':bricks',
+      },
+      {
+        value: '🧲',
+        terms: ':magnet',
+      },
+      {
+        value: '🧳',
+        terms: ':luggage',
+      },
+      {
+        value: '🧴',
+        terms: ':lotion_bottle',
+      },
+      {
+        value: '🧵',
+        terms: ':thread',
+      },
+      {
+        value: '🧶',
+        terms: ':yarn',
+      },
+      {
+        value: '🧷',
+        terms: ':safety_pin',
+      },
+      {
+        value: '🧸',
+        terms: ':teddy_bear',
+      },
+      {
+        value: '🧹',
+        terms: ':broom',
+      },
+      {
+        value: '🧺',
+        terms: ':basket',
+      },
+      {
+        value: '🧻',
+        terms: ':roll_of_paper',
+      },
+      {
+        value: '🧼',
+        terms: ':soap',
+      },
+      {
+        value: '🧽',
+        terms: ':sponge',
+      },
+      {
+        value: '🧿',
+        terms: ':nazar_amulet',
+      },
+      {
+        value: '🩰',
+        terms: ':ballet_shoes',
+      },
+      {
+        value: '🩱',
+        terms: ':one-piece_swimsuit',
+      },
+      {
+        value: '🩲',
+        terms: ':briefs',
+      },
+      {
+        value: '🩳',
+        terms: ':shorts',
+      },
+      {
+        value: '🩴',
+        terms: ':thong_sandal',
+      },
+      {
+        value: '🩸',
+        terms: ':drop_of_blood',
+      },
+      {
+        value: '🩹',
+        terms: ':adhesive_bandage',
+      },
+      {
+        value: '🩺',
+        terms: ':stethoscope',
+      },
+      {
+        value: '🪀',
+        terms: ':yo-yo',
+      },
+      {
+        value: '🪁',
+        terms: ':kite',
+      },
+      {
+        value: '🪂',
+        terms: ':parachute',
+      },
+      {
+        value: '🪃',
+        terms: ':boomerang',
+      },
+      {
+        value: '🪄',
+        terms: ':magic_wand',
+      },
+      {
+        value: '🪅',
+        terms: ':pinata',
+      },
+      {
+        value: '🪆',
+        terms: ':nesting_dolls',
+      },
+      {
+        value: '🪐',
+        terms: ':ringed_planet',
+      },
+      {
+        value: '🪑',
+        terms: ':chair',
+      },
+      {
+        value: '🪒',
+        terms: ':razor',
+      },
+      {
+        value: '🪓',
+        terms: ':axe',
+      },
+      {
+        value: '🪔',
+        terms: ':diya_lamp',
+      },
+      {
+        value: '🪕',
+        terms: ':banjo',
+      },
+      {
+        value: '🪖',
+        terms: ':military_helmet',
+      },
+      {
+        value: '🪗',
+        terms: ':accordion',
+      },
+      {
+        value: '🪘',
+        terms: ':long_drum',
+      },
+      {
+        value: '🪙',
+        terms: ':coin',
+      },
+      {
+        value: '🪚',
+        terms: ':carpentry_saw',
+      },
+      {
+        value: '🪛',
+        terms: ':screwdriver',
+      },
+      {
+        value: '🪜',
+        terms: ':ladder',
+      },
+      {
+        value: '🪝',
+        terms: ':hook',
+      },
+      {
+        value: '🪞',
+        terms: ':mirror',
+      },
+      {
+        value: '🪟',
+        terms: ':window',
+      },
+      {
+        value: '🪠',
+        terms: ':plunger',
+      },
+      {
+        value: '🪡',
+        terms: ':sewing_needle',
+      },
+      {
+        value: '🪢',
+        terms: ':knot',
+      },
+      {
+        value: '🪣',
+        terms: ':bucket',
+      },
+      {
+        value: '🪤',
+        terms: ':mouse_trap',
+      },
+      {
+        value: '🪥',
+        terms: ':toothbrush',
+      },
+      {
+        value: '🪦',
+        terms: ':headstone',
+      },
+      {
+        value: '🪧',
+        terms: ':placard',
+      },
+      {
+        value: '🪨',
+        terms: ':rock',
+      },
+      {
+        value: '🪰',
+        terms: ':fly',
+      },
+      {
+        value: '🪱',
+        terms: ':worm',
+      },
+      {
+        value: '🪲',
+        terms: ':beetle',
+      },
+      {
+        value: '🪳',
+        terms: ':cockroach',
+      },
+      {
+        value: '🪴',
+        terms: ':potted_plant',
+      },
+      {
+        value: '🪵',
+        terms: ':wood',
+      },
+      {
+        value: '🪶',
+        terms: ':feather',
+      },
+      {
+        value: '🫀',
+        terms: ':anatomical_heart',
+      },
+      {
+        value: '🫁',
+        terms: ':lungs',
+      },
+      {
+        value: '🫂',
+        terms: ':people_hugging',
+      },
+      {
+        value: '🫐',
+        terms: ':blueberries',
+      },
+      {
+        value: '🫑',
+        terms: ':bell_pepper',
+      },
+      {
+        value: '🫒',
+        terms: ':olive',
+      },
+      {
+        value: '🫓',
+        terms: ':flatbread',
+      },
+      {
+        value: '🫔',
+        terms: ':tamale',
+      },
+      {
+        value: '🫕',
+        terms: ':fondue',
+      },
+      {
+        value: '🫖',
+        terms: ':teapot',
+      },
+      {
+        value: '‼️',
+        terms: ':bangbang',
+      },
+      {
+        value: '⁉️',
+        terms: ':interrobang',
+      },
+      {
+        value: '™️',
+        terms: ':tm',
+      },
+      {
+        value: 'ℹ️',
+        terms: ':information_source',
+      },
+      {
+        value: '↔️',
+        terms: ':left_right_arrow',
+      },
+      {
+        value: '↕️',
+        terms: ':arrow_up_down',
+      },
+      {
+        value: '↖️',
+        terms: ':arrow_upper_left',
+      },
+      {
+        value: '↗️',
+        terms: ':arrow_upper_right',
+      },
+      {
+        value: '↘️',
+        terms: ':arrow_lower_right',
+      },
+      {
+        value: '↙️',
+        terms: ':arrow_lower_left',
+      },
+      {
+        value: '↩️',
+        terms: ':leftwards_arrow_with_hook',
+      },
+      {
+        value: '↪️',
+        terms: ':arrow_right_hook',
+      },
+      {
+        value: '⌨️',
+        terms: ':keyboard',
+      },
+      {
+        value: '⏏️',
+        terms: ':eject',
+      },
+      {
+        value: '⏭️',
+        terms: ':black_right_pointing_double_triangle_with_vertical_bar',
+      },
+      {
+        value: '⏮️',
+        terms: ':black_left_pointing_double_triangle_with_vertical_bar',
+      },
+      {
+        value: '⏯️',
+        terms: ':black_right_pointing_triangle_with_double_vertical_bar',
+      },
+      {
+        value: '⏱️',
+        terms: ':stopwatch',
+      },
+      {
+        value: '⏲️',
+        terms: ':timer_clock',
+      },
+      {
+        value: '⏸️',
+        terms: ':double_vertical_bar',
+      },
+      {
+        value: '⏹️',
+        terms: ':black_square_for_stop',
+      },
+      {
+        value: '⏺️',
+        terms: ':black_circle_for_record',
+      },
+      {
+        value: 'Ⓜ️',
+        terms: ':m',
+      },
+      {
+        value: '▪️',
+        terms: ':black_small_square',
+      },
+      {
+        value: '▫️',
+        terms: ':white_small_square',
+      },
+      {
+        value: '▶️',
+        terms: ':arrow_forward',
+      },
+      {
+        value: '◀️',
+        terms: ':arrow_backward',
+      },
+      {
+        value: '◻️',
+        terms: ':white_medium_square',
+      },
+      {
+        value: '◼️',
+        terms: ':black_medium_square',
+      },
+      {
+        value: '☀️',
+        terms: ':sunny',
+      },
+      {
+        value: '☁️',
+        terms: ':cloud',
+      },
+      {
+        value: '☂️',
+        terms: ':umbrella',
+      },
+      {
+        value: '☃️',
+        terms: ':snowman',
+      },
+      {
+        value: '☄️',
+        terms: ':comet',
+      },
+      {
+        value: '☎️',
+        terms: ':phone',
+      },
+      {
+        value: '☎️',
+        terms: ':telephone',
+      },
+      {
+        value: '☑️',
+        terms: ':ballot_box_with_check',
+      },
+      {
+        value: '☘️',
+        terms: ':shamrock',
+      },
+      {
+        value: '☝️',
+        terms: ':point_up',
+      },
+      {
+        value: '☠️',
+        terms: ':skull_and_crossbones',
+      },
+      {
+        value: '☢️',
+        terms: ':radioactive_sign',
+      },
+      {
+        value: '☣️',
+        terms: ':biohazard_sign',
+      },
+      {
+        value: '☦️',
+        terms: ':orthodox_cross',
+      },
+      {
+        value: '☪️',
+        terms: ':star_and_crescent',
+      },
+      {
+        value: '☮️',
+        terms: ':peace_symbol',
+      },
+      {
+        value: '☯️',
+        terms: ':yin_yang',
+      },
+      {
+        value: '☸️',
+        terms: ':wheel_of_dharma',
+      },
+      {
+        value: '☹️',
+        terms: ':white_frowning_face',
+      },
+      {
+        value: '☺️',
+        terms: ':relaxed',
+      },
+      {
+        value: '♀️',
+        terms: ':female_sign',
+      },
+      {
+        value: '♂️',
+        terms: ':male_sign',
+      },
+      {
+        value: '♟️',
+        terms: ':chess_pawn',
+      },
+      {
+        value: '♠️',
+        terms: ':spades',
+      },
+      {
+        value: '♣️',
+        terms: ':clubs',
+      },
+      {
+        value: '♥️',
+        terms: ':hearts',
+      },
+      {
+        value: '♦️',
+        terms: ':diamonds',
+      },
+      {
+        value: '♨️',
+        terms: ':hotsprings',
+      },
+      {
+        value: '♻️',
+        terms: ':recycle',
+      },
+      {
+        value: '♾️',
+        terms: ':infinity',
+      },
+      {
+        value: '⚒️',
+        terms: ':hammer_and_pick',
+      },
+      {
+        value: '⚔️',
+        terms: ':crossed_swords',
+      },
+      {
+        value: '⚕️',
+        terms: ':medical_symbol',
+      },
+      {
+        value: '⚕️',
+        terms: ':staff_of_aesculapius',
+      },
+      {
+        value: '⚖️',
+        terms: ':scales',
+      },
+      {
+        value: '⚗️',
+        terms: ':alembic',
+      },
+      {
+        value: '⚙️',
+        terms: ':gear',
+      },
+      {
+        value: '⚛️',
+        terms: ':atom_symbol',
+      },
+      {
+        value: '⚜️',
+        terms: ':fleur_de_lis',
+      },
+      {
+        value: '⚠️',
+        terms: ':warning',
+      },
+      {
+        value: '⚧️',
+        terms: ':transgender_symbol',
+      },
+      {
+        value: '⚰️',
+        terms: ':coffin',
+      },
+      {
+        value: '⚱️',
+        terms: ':funeral_urn',
+      },
+      {
+        value: '⛈️',
+        terms: ':thunder_cloud_and_rain',
+      },
+      {
+        value: '⛏️',
+        terms: ':pick',
+      },
+      {
+        value: '⛑️',
+        terms: ':helmet_with_white_cross',
+      },
+      {
+        value: '⛓️',
+        terms: ':chains',
+      },
+      {
+        value: '⛩️',
+        terms: ':shinto_shrine',
+      },
+      {
+        value: '⛰️',
+        terms: ':mountain',
+      },
+      {
+        value: '⛱️',
+        terms: ':umbrella_on_ground',
+      },
+      {
+        value: '⛴️',
+        terms: ':ferry',
+      },
+      {
+        value: '⛷️',
+        terms: ':skier',
+      },
+      {
+        value: '⛸️',
+        terms: ':ice_skate',
+      },
+      {
+        value: '✂️',
+        terms: ':scissors',
+      },
+      {
+        value: '✈️',
+        terms: ':airplane',
+      },
+      {
+        value: '✉️',
+        terms: ':email',
+      },
+      {
+        value: '✉️',
+        terms: ':envelope',
+      },
+      {
+        value: '✌️',
+        terms: ':v',
+      },
+      {
+        value: '✍️',
+        terms: ':writing_hand',
+      },
+      {
+        value: '✏️',
+        terms: ':pencil2',
+      },
+      {
+        value: '✒️',
+        terms: ':black_nib',
+      },
+      {
+        value: '✔️',
+        terms: ':heavy_check_mark',
+      },
+      {
+        value: '✖️',
+        terms: ':heavy_multiplication_x',
+      },
+      {
+        value: '✝️',
+        terms: ':latin_cross',
+      },
+      {
+        value: '✡️',
+        terms: ':star_of_david',
+      },
+      {
+        value: '✳️',
+        terms: ':eight_spoked_asterisk',
+      },
+      {
+        value: '✴️',
+        terms: ':eight_pointed_black_star',
+      },
+      {
+        value: '❄️',
+        terms: ':snowflake',
+      },
+      {
+        value: '❇️',
+        terms: ':sparkle',
+      },
+      {
+        value: '❣️',
+        terms: ':heavy_heart_exclamation_mark_ornament',
+      },
+      {
+        value: '❤️‍🔥',
+        terms: ':heart_on_fire',
+      },
+      {
+        value: '❤️‍🩹',
+        terms: ':mending_heart',
+      },
+      {
+        value: '❤️',
+        terms: ':heart',
+      },
+      {
+        value: '➡️',
+        terms: ':arrow_right',
+      },
+      {
+        value: '⤴️',
+        terms: ':arrow_heading_up',
+      },
+      {
+        value: '⤵️',
+        terms: ':arrow_heading_down',
+      },
+      {
+        value: '⬅️',
+        terms: ':arrow_left',
+      },
+      {
+        value: '⬆️',
+        terms: ':arrow_up',
+      },
+      {
+        value: '⬇️',
+        terms: ':arrow_down',
+      },
+      {
+        value: '〰️',
+        terms: ':wavy_dash',
+      },
+      {
+        value: '〽️',
+        terms: ':part_alternation_mark',
+      },
+      {
+        value: '㊗️',
+        terms: ':congratulations',
+      },
+      {
+        value: '㊙️',
+        terms: ':secret',
+      },
+      {
+        value: '❤️',
+        terms: '<3',
+      },
+    ],
+  },
 ];

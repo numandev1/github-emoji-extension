@@ -21,13 +21,17 @@ const Button = ({ textArea }: { textArea: Element }) => {
       setTimeout(() => {
         inputRef.current?.focus();
       }, 0);
+    } else {
       setEmojisDirectoriesState(emojisDirectories);
+      setSearchTerm('');
     }
   }, [isPopoverOpen]);
 
   useEffect(() => {
     RecentEmojis.initEmojiListener(() => {
-      setRecentsEmojis(RecentEmojis.recentEmojis[recents_emojis_key]);
+      setTimeout(() => {
+        setRecentsEmojis(RecentEmojis.recentEmojis[recents_emojis_key]);
+      }, 0);
     });
     chrome.storage.sync.onChanged.addListener(() => {
       RecentEmojis.getRecentsEmojis()
@@ -48,17 +52,22 @@ const Button = ({ textArea }: { textArea: Element }) => {
       var evtobj = window.event ? window.event : e;
       //@ts-ignore
       if (evtobj.ctrlKey || (evtobj.metaKey && evtobj.keyCode === 191)) {
-        setIsPopoverOpen(!isPopoverOpen);
-        if (!isPopoverOpen) {
+        if (isPopoverOpen) {
           setTimeout(() => {
             textArea?.focus();
           }, 0);
         }
+        setIsPopoverOpen(!isPopoverOpen);
       } else if (
         evtobj.key === 'Escape' ||
         evtobj.key === 'Enter' ||
         evtobj.keyCode === 13
       ) {
+        if (isPopoverOpen) {
+          setTimeout(() => {
+            textArea?.focus();
+          }, 0);
+        }
         setIsPopoverOpen(false);
       }
     };
@@ -128,61 +137,61 @@ const Button = ({ textArea }: { textArea: Element }) => {
           className="popover-arrow-container"
           arrowClassName="popover-arrow"
         >
-          <div className="gh_emoji_container">
+          <div className="gh-emoji-container">
             {/** Input **/}
-            <div className="gh_emoji_input-wrapper">
+            <div className="gh-emoji-input-wrapper">
               <img
-                className="gh_emoji_search_icon"
+                className="gh-emoji-search-icon"
                 src={SVG['search']}
                 alt="search icon"
               />
               <input
                 ref={inputRef}
-                id="gh_emoji_input_search"
+                id="gh-emoji-input-search"
                 placeholder="Search emoji..."
                 onChange={onSearch}
               />
             </div>
 
-            <div className="gh_emoji_shortcut-wrapper">
-              <a href="#gh_emoji_smileyy">
+            <div className="gh-emoji-shortcut-wrapper">
+              <a href="#gh-emoji-smileyy">
                 <img src={SVG['smiley']} alt="smiley icon" />
               </a>
-              <a href="#gh_emoji_people">
+              <a href="#gh-emoji-people">
                 <img src={SVG['hand']} alt="hand icon" />
               </a>
-              <a href="#gh_emoji_animals">
+              <a href="#gh-emoji-animals">
                 <img src={SVG['animal']} alt="animal icon" />
               </a>
-              <a href="#gh_emoji_food">
+              <a href="#gh-emoji-food">
                 <img src={SVG['food']} alt="food icon" />
               </a>
-              <a href="#gh_emoji_travel">
+              <a href="#gh-emoji-travel">
                 <img src={SVG['travel']} alt="travel icon" />
               </a>
-              <a href="#gh_emoji_activities">
+              <a href="#gh-emoji-activities">
                 <img src={SVG['activities']} alt="activities icon" />
               </a>
-              <a href="#gh_emoji_objects">
+              <a href="#gh-emoji-objects">
                 <img src={SVG['objects']} alt="objects icon" />
               </a>
-              <a href="#gh_emoji_symbols">
+              <a href="#gh-emoji-symbols">
                 <img src={SVG['symbols']} alt="symbols icon" />
               </a>
-              <a href="#gh_emoji_flags">
+              <a href="#gh-emoji-flags">
                 <img src={SVG['flags']} alt="flags icon" />
               </a>
             </div>
 
             {/** emojies **/}
-            <div className="gh_emoji_directory-wrapper">
+            <div className="gh-emoji-directory-wrapper">
               {emojisDirectoriesState.length === 0 ? (
                 <p>No emoji found.</p>
               ) : (
                 <>
                   {!searchTerm && recentsEmojis?.length > 0 && (
                     <>
-                      <p className="title" id={`gh_emoji_recents`}>
+                      <p className="title" id={`gh-emoji-recents`}>
                         <span>RECENTS</span>
                       </p>
                       <div className="emojis">
@@ -202,7 +211,7 @@ const Button = ({ textArea }: { textArea: Element }) => {
                   {emojisDirectoriesState.map((section) => {
                     return (
                       <>
-                        <p className="title" id={`gh_emoji_${section.link}`}>
+                        <p className="title" id={`gh-emoji-${section.link}`}>
                           <span>{section.title}</span>
                         </p>
                         <div className="emojis">
@@ -224,7 +233,7 @@ const Button = ({ textArea }: { textArea: Element }) => {
               )}
             </div>
 
-            {/* <div className="gh_emoji_output-wrapper">
+            {/* <div className="gh-emoji-output-wrapper">
            <h1>nomi</h1>
           </div> */}
           </div>
