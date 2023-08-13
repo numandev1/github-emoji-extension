@@ -46,6 +46,7 @@ loadContent();
 document.arrive(
   'tab-container.js-previewable-comment-form',
   function (newElem: Element) {
+    console.log('markdow editor have come into dom');
     RecentEmojis.init();
     const tabHeader = newElem.querySelector('div.tabnav-tabs[role="tablist"]');
     const textArea = newElem.querySelector('textarea[name="comment[body]"]');
@@ -60,15 +61,18 @@ document.arrive(
 document.arrive(
   'div[data-testid="markdown-editor"]',
   function (newElem: Element) {
-    console.log('new arrive', window.location, 'ss');
+    console.log('markdow editor have come into dom');
     RecentEmojis.init();
     const tabHeader = newElem.querySelector('header :first-child');
     const textArea = newElem.querySelector(
       'textarea[aria-label="Markdown value"]'
     );
-    console.log(tabHeader, 'tabHeader', textArea);
     if (tabHeader && textArea) {
       addEmojiButtonIntoElement(tabHeader, textArea);
     }
   }
 );
+
+// document.addEventListener('focusin', function (e) {
+//   console.log('focusin!');
+// });

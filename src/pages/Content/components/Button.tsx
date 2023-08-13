@@ -51,7 +51,7 @@ const Button = ({ textArea }: { textArea: Element }) => {
       //@ts-ignore
       var evtobj = window.event ? window.event : e;
       //@ts-ignore
-      if (evtobj.ctrlKey || (evtobj.metaKey && evtobj.keyCode === 191)) {
+      if ((evtobj.ctrlKey || evtobj.metaKey) && evtobj.keyCode === 222) {
         if (isPopoverOpen) {
           setTimeout(() => {
             textArea?.focus();
