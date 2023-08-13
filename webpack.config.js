@@ -12,7 +12,11 @@ var ReactRefreshTypeScript = require('react-refresh-typescript');
 const ASSET_PATH = process.env.ASSET_PATH || '/';
 
 var alias = {
-  '@utils': path.resolve(__dirname, './src/utils'),
+  '@components': path.resolve(__dirname, './src/pages/Content/components'),
+  '@entities': path.resolve(__dirname, './src/pages/Content/entities'),
+  '@hooks': path.resolve(__dirname, './src/pages/Content/hooks'),
+  '@utils': path.resolve(__dirname, './src/pages/Content/utils'),
+  '@loaders': path.resolve(__dirname, './src/pages/Content/loaders'),
 };
 
 // load the secrets
@@ -40,7 +44,6 @@ const isDevelopment = process.env.NODE_ENV !== 'production';
 var options = {
   mode: process.env.NODE_ENV || 'development',
   entry: {
-    newtab: path.join(__dirname, 'src', 'pages', 'Newtab', 'index.tsx'),
     options: path.join(__dirname, 'src', 'pages', 'Options', 'index.tsx'),
     popup: path.join(__dirname, 'src', 'pages', 'Popup', 'index.tsx'),
     background: path.join(__dirname, 'src', 'pages', 'Background', 'index.ts'),
@@ -48,7 +51,7 @@ var options = {
     devtools: path.join(__dirname, 'src', 'pages', 'Devtools', 'index.ts'),
     panel: path.join(__dirname, 'src', 'pages', 'Panel', 'index.tsx'),
   },
-  chromeExtensionBoilerplate: {
+  chromeExtension: {
     notHotReload: ['background', 'devtools'],
   },
   output: {
@@ -186,11 +189,23 @@ var options = {
         },
       ],
     }),
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'src', 'pages', 'Newtab', 'index.html'),
-      filename: 'newtab.html',
-      chunks: ['newtab'],
-      cache: false,
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: './node_modules/react/umd/react.production.min.js',
+          to: path.join(__dirname, 'build', 'react', 'react.min.js'),
+          force: true,
+        },
+      ],
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: './node_modules/react-dom/umd/react-dom.production.min.js',
+          to: path.join(__dirname, 'build', 'react', 'react-dom.min.js'),
+          force: true,
+        },
+      ],
     }),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src', 'pages', 'Options', 'index.html'),

@@ -3,7 +3,7 @@
 </div>
 <div align="center">
 
-[![Chrome Web Store](https://img.shields.io/static/v1?style=for-the-badge&message=Chrome+Web+Store&color=4285F4&logo=Google+Chrome&logoColor=FFFFFF&label=)](https://discord.gg/dtYzk8sp)
+[![Chrome Web Store](https://img.shields.io/static/v1?style=for-the-badge&message=Chrome+Web+Store&color=4285F4&logo=Google+Chrome&logoColor=FFFFFF&label=)](https://chrome.google.com/webstore/detail/ecldoejhjmekemajgjjalfgkhgmfjgcl)
 [![GitHub Repo stars](https://img.shields.io/github/stars/numandev1/github-emoji-extension?style=for-the-badge&logo=github)](https://github.com/numandev1/github-emoji-extension/stargazers)
 ![npm](https://img.shields.io/static/v1?style=for-the-badge&message=TypeScript&color=3178C6&logo=TypeScript&logoColor=FFFFFF&label=)
 
@@ -53,9 +53,9 @@ Window: `ctrl + '`
 
 #### Chrome Web Store
 
-Go to the [Chrome Web Store page for _Github Emoji_](https://chrome.google.com/webstore/detail/test) and install normally.
+Go to the [Chrome Web Store page for _Github Emoji_](https://chrome.google.com/webstore/detail/ecldoejhjmekemajgjjalfgkhgmfjgcl) and install normally.
 
-After installing, make sure to reload your webmail or restart Chrome!
+After installing, make sure to reload your Github URL or restart Chrome!
 
 #### Manual/Development
 
@@ -69,6 +69,14 @@ After installing, make sure to reload your webmail or restart Chrome!
    3. Click on `Load unpacked extension`
    4. Select the `build` folder.
 
+## Contribution Guide
+
+1. Follow [Manual/Development](#manualdevelopment) steps
+2. Install [Extensions Reloader](https://chrome.google.com/webstore/detail/extensions-reloader/fimgfedafeadlieiabdeeaodndnlbhid) extension
+3. As the main code lives in `src/pages/Content` so whenever we change in this directory, we have to press [Extensions Reloader](https://chrome.google.com/webstore/detail/extensions-reloader/fimgfedafeadlieiabdeeaodndnlbhid)
+4. After pressing [Extensions Reloader](https://chrome.google.com/webstore/detail/extensions-reloader/fimgfedafeadlieiabdeeaodndnlbhid), we have to reload GitHub page for reflecting changes
+5. Make changes and make PR 🚀
+
 ## Meta
 
-Created by [@numandev1](https://github.com/numandev1?tab=followers)
+Created by [Github@NumanDev1](https://github.com/numandev1?tab=followers)

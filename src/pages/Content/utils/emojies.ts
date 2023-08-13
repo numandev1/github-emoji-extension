@@ -1,4 +1,5 @@
-export const emojisDirectories = [
+import { EmojiDirectory } from '../entities/emojiTypo';
+export const emojisDirectories: EmojiDirectory[] = [
   {
     title: 'Smileys & Emotion',
     link: 'smileyy',

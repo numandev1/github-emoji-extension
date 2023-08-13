@@ -11,7 +11,7 @@
     "build": "node utils/build.js",
     "start": "node utils/webserver.js",
     "prettier": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
-    "postinstall": "./utils/postinstall.sh"
+    "prepare:prod": "NODE_ENV=production npm run build"
   },
   "dependencies": {
     "arrive": "^2.4.1",

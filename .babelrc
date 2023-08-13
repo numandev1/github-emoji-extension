@@ -13,7 +13,12 @@
           "./src"
         ],
         "alias": {
-          "@utils": "./src/utils"
+          // alias for content directory
+          "@components": "./src/pages/Content/components",
+          "@entities": "./src/pages/Content/entities",
+          "@hooks": "./src/pages/Content/hooks",
+          "@utils": "./src/pages/Content/utils",
+          "@loaders": "./src/pages/Content/loaders"
         }
       }
     ]

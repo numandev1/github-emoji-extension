@@ -9,7 +9,7 @@ var webpack = require('webpack'),
   config = require('../webpack.config'),
   ZipPlugin = require('zip-webpack-plugin');
 
-delete config.chromeExtensionBoilerplate;
+delete config.chromeExtension;
 
 config.mode = 'production';
 

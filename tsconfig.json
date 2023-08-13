@@ -20,8 +20,20 @@
     "jsx": "react",
     "baseUrl": ".",
     "paths": {
+      "@components/*": [
+        "./src/pages/Content/components/*"
+      ],
+      "@entities/*": [
+        "./src/pages/Content/entities/*"
+      ],
+      "@hooks/*": [
+        "./src/pages/Content/hooks/*"
+      ],
       "@utils/*": [
-        "./src/utils/*"
+        "./src/pages/Content/utils/*"
+      ],
+      "@loaders/*": [
+        "./src/pages/Content/loaders/*"
       ]
     }
   },

@@ -225,3 +225,14 @@ input:focus {
   justify-content: center;
   align-items: center;
 }
+
+.gh-emoji-output-wrapper {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-link {
+  color: #61dafb;
+}

@@ -1,19 +1,15 @@
+import { Emoji } from '@entities/emojiTypo';
 export const recents_emojis_key = 'recents_emojis';
 
-interface EmojiObjectType {
-  value: string;
-  terms: string;
-}
-
 class RecentEmojis {
-  public recentEmojis: { [recents_emojis_key: string]: EmojiObjectType[] } = {
+  public recentEmojis: { [recents_emojis_key: string]: Emoji[] } = {
     [recents_emojis_key]: [],
   };
   private initCallback: any = undefined;
 
   init = () => {
     this.getRecentsEmojis()
-      .then((result: EmojiObjectType[]) => {
+      .then((result: Emoji[]) => {
         this.recentEmojis = { [recents_emojis_key]: result };
         this.initCallback && this.initCallback();
       })
@@ -26,9 +22,8 @@ class RecentEmojis {
     this.initCallback = callback;
   };
 
-  setRecentEmojis = async (emoji: EmojiObjectType) => {
-    const allRecentEmojis: EmojiObjectType[] =
-      (await this.getRecentsEmojis()) as any;
+  setRecentEmojis = async (emoji: Emoji) => {
+    const allRecentEmojis: Emoji[] = (await this.getRecentsEmojis()) as any;
     const index = allRecentEmojis.findIndex(
       (item) => item.value === emoji.value
     );
@@ -49,6 +44,10 @@ class RecentEmojis {
   getRecentsEmojis = async () => {
     const results = await chrome.storage.sync.get(recents_emojis_key);
     return results[recents_emojis_key] || [];
+  };
+
+  listener = (callback: () => void) => {
+    chrome.storage.sync.onChanged.addListener(callback);
   };
 }
 
