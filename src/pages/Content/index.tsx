@@ -15,7 +15,7 @@ const addEmojiButtonIntoElement = (element: Element, textArea: Element) => {
   editorTab.appendChild(emojiSpan);
 
   const reactRoot = ReactDOM.createRoot(
-    editorTab.querySelector(`.${EMOJI_SPAN_CLASS}` as any) // Use the cloned span within the tab
+    editorTab.querySelector(`.${EMOJI_SPAN_CLASS}` as any)
   );
 
   reactRoot.render(
@@ -57,6 +57,7 @@ document.arrive(
 );
 
 //for github project page
+// known issue, we have to bypass focus-trap: https://github.com/primer/behaviors in github project page, where search input is not getting focus
 //@ts-ignore
 document.arrive(
   'div[data-testid="markdown-editor"]',
@@ -72,7 +73,3 @@ document.arrive(
     }
   }
 );
-
-// document.addEventListener('focusin', function (e) {
-//   console.log('focusin!');
-// });

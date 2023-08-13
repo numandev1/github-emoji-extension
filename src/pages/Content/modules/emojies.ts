@@ -1,5 +1,3 @@
-// import { decodeHtmlEntity } from '@utils/index';
-
 export const emojisDirectories = [
   {
     title: 'Smileys & Emotion',

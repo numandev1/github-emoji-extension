@@ -1,5 +1,5 @@
 chrome.devtools.panels.create(
-  'Dev Tools from chrome-extension-boilerplate-react',
+  'Dev Tools from github-emoji-extension',
   'icon-34.png',
   'panel.html'
 );

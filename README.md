@@ -21,6 +21,7 @@
 ## Shortcut key
 
 Macbook: `Cmd + '` or `ctrl + '`
+
 Window: `ctrl + '`
 
 ## Made with
@@ -70,4 +71,4 @@ After installing, make sure to reload your webmail or restart Chrome!
 
 ## Meta
 
-Created by [Numan.dev](https://numan.dev/)
+Created by [@numandev1](https://github.com/numandev1?tab=followers)

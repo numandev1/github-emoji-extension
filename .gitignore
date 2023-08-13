@@ -20,5 +20,5 @@
 .env.production.local
 .history
 
-# secrets
+# all secrets
 secrets.*.js

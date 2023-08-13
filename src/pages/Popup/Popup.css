@@ -39,7 +39,12 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.mt-20 {
+  margin-top: 10px;
 }
