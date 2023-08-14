@@ -3,7 +3,8 @@
 </div>
 <div align="center">
 
-[![Chrome Web Store](https://img.shields.io/static/v1?style=for-the-badge&message=Chrome+Web+Store&color=4285F4&logo=Google+Chrome&logoColor=FFFFFF&label=)](https://chrome.google.com/webstore/detail/ecldoejhjmekemajgjjalfgkhgmfjgcl)
+<!-- [![Chrome Web Store](https://img.shields.io/static/v1?style=for-the-badge&message=Chrome+Web+Store&color=4285F4&logo=Google+Chrome&logoColor=FFFFFF&label=)](https://chrome.google.com/webstore/detail/ecldoejhjmekemajgjjalfgkhgmfjgcl) -->
+
 [![GitHub Repo stars](https://img.shields.io/github/stars/numandev1/github-emoji-extension?style=for-the-badge&logo=github)](https://github.com/numandev1/github-emoji-extension/stargazers)
 ![npm](https://img.shields.io/static/v1?style=for-the-badge&message=TypeScript&color=3178C6&logo=TypeScript&logoColor=FFFFFF&label=)
 
@@ -52,6 +53,8 @@ Window: `ctrl + '`
 ### Chrome
 
 #### Chrome Web Store
+
+⚠ It is in review, soon it will be published, so you can follow temporary [Manual/Development](#manualdevelopment)
 
 Go to the [Chrome Web Store page for _Github Emoji_](https://chrome.google.com/webstore/detail/ecldoejhjmekemajgjjalfgkhgmfjgcl) and install normally.
 
