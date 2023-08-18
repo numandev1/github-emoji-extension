@@ -1,6 +1,6 @@
 {
   "name": "github-emoji-extension",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Use emojis in github Issues/PR",
   "license": "MIT",
   "repository": {
@@ -11,7 +11,7 @@
     "build": "node utils/build.js",
     "start": "node utils/webserver.js",
     "prettier": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
-    "prepare:prod": "NODE_ENV=production npm run build"
+    "zip": "NODE_ENV=production ./node_modules/.bin/webpack --config ./utils/build.js --mode production"
   },
   "dependencies": {
     "arrive": "^2.4.1",
@@ -61,5 +61,20 @@
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.11.1",
     "zip-webpack-plugin": "^4.0.1"
-  }
+  },
+  "keywords": [
+    "github",
+    "react",
+    "javascript",
+    "emoji",
+    "chrome",
+    "extension",
+    "reactjs",
+    "browser-extension",
+    "google-browser-extension",
+    "emojis",
+    "webstore",
+    "extension-chrome",
+    "cli"
+  ]
 }
