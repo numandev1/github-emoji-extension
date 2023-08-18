@@ -9,31 +9,28 @@ const Popup = () => {
         <img src={logo} className="App-logo" alt="logo" />
         <a
           className="App-link"
+          href="https://chrome.google.com/webstore/detail/ecldoejhjmekemajgjjalfgkhgmfjgcl"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="https://img.shields.io/static/v1?style=for-the-badge&message=Review+On+WebStore&color=4285F4&logo=Google+Chrome&logoColor=FFFFFF&label=" />
+        </a>
+        <a
+          className="App-link"
           href="https://github.com/numandev1/github-emojis-extension/stargazers"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h4>Consider supporting with a Star ⭐️</h4>
+          <h4>support with a Star on Github ⭐️</h4>
         </a>
         <a
-          href="https://github.com/numandev1/github-emoji-extension/stargazers"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="https://img.shields.io/github/stars/numandev1/github-emoji-extension?style=for-the-badge&logo=github"
-            height="20"
-          />
-        </a>
-        <a
-          className="mt-20"
           href="https://github.com/numandev1?tab=followers"
           target="_blank"
           rel="noopener noreferrer"
         >
           <img
             src="https://img.shields.io/github/followers/numandev1?label=Follow%20%40numandev1&style=social"
-            height="20"
+            height="25"
           />
         </a>
         <a

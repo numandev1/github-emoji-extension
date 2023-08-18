@@ -18,12 +18,6 @@
 
 </div>
 
-## Shortcut key
-
-Macbook: `Cmd + '` or `ctrl + '`
-
-Window: `ctrl + '`
-
 ## Made with
 
 - <img src="https://img.icons8.com/?size=2x&id=t5K2CR8feVdX&format=png" width="18" height="18"/> Made with **[React 18](https://reactjs.org)**
@@ -31,31 +25,11 @@ Window: `ctrl + '`
 - 🛠️ [Devtools](https://developer.chrome.com/docs/extensions/mv3/devtools/) supported
 - <img src="https://img.icons8.com/?size=2x&id=nvw4LO3DfcyI&format=png" width="18" height="18"/> Using **[Webpack](https://webpack.js.org/)**
 
-### Would you like to support me?
+## ⏳ Installation
 
-<div align="center">
-<a href="https://github.com/numandev1?tab=followers">
-    <img src="https://img.shields.io/github/followers/numandev1?label=Follow%20%40numandev1&style=social" height="36" />
-</a>
-<a href="https://twitter.com/numandev1/">
-    <img src="https://img.shields.io/twitter/follow/numandev1?label=Follow%20%40numandev1&style=social" height="36" />
-</a>
-<a href="https://www.youtube.com/@numandev?sub_confirmation=1"><img src="https://img.shields.io/youtube/channel/subscribers/UCYCUspfN7ZevgCj3W5GlFAw?style=social" height="36" /><a/>
-</br>
-<a href="https://www.buymeacoffee.com/numan.dev" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
-</div>
+##### Install from Chrome Web Store
 
-## Consider supporting with a ⭐️ [Star on GitHub](https://github.com/numandev1/github-emojis-extension/stargazers)
-
-## ⏳ Installation Instructions
-
-### Chrome
-
-#### Chrome Web Store
-
-Go to the [Chrome Web Store page for _Github Emoji_](https://chrome.google.com/webstore/detail/ecldoejhjmekemajgjjalfgkhgmfjgcl) and install normally.
-
-After installing, make sure to reload your Github URL or restart Chrome!
+[![Chrome Web Store](https://img.shields.io/static/v1?style=for-the-badge&message=Install+From+Chrome+Web+Store&color=4285F4&logo=Google+Chrome&logoColor=FFFFFF&label=)](https://chrome.google.com/webstore/detail/ecldoejhjmekemajgjjalfgkhgmfjgcl)
 
 #### Manual/Development
 
@@ -68,6 +42,30 @@ After installing, make sure to reload your Github URL or restart Chrome!
    2. Check `Developer mode`
    3. Click on `Load unpacked extension`
    4. Select the `build` folder.
+
+## Shortcut key
+
+Macbook: `Cmd + '` or `ctrl + '`
+
+Window: `ctrl + '`
+
+### Would you like to support me?
+
+<div align="center">
+<a href="https://github.com/numandev1?tab=followers">
+    <img src="https://img.shields.io/github/followers/numandev1?label=Follow%20%40numandev1&style=social" height="36" />
+</a>
+</br>
+<a href="https://twitter.com/numandev1/">
+    <img src="https://img.shields.io/twitter/follow/numandev1?label=Follow%20%40numandev1&style=social" height="36" />
+</a>
+</br>
+<a href="https://www.youtube.com/@numandev?sub_confirmation=1"><img src="https://img.shields.io/youtube/channel/subscribers/UCYCUspfN7ZevgCj3W5GlFAw?style=social" height="36" /><a/>
+</br>
+<a href="https://www.buymeacoffee.com/numan.dev" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+</div>
+
+#### Consider supporting with a ⭐️ [Star on GitHub](https://github.com/numandev1/github-emojis-extension/stargazers)
 
 ## Contribution Guide
 
