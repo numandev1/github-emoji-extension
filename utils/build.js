@@ -3,8 +3,7 @@ process.env.BABEL_ENV = 'production';
 process.env.NODE_ENV = 'production';
 process.env.ASSET_PATH = '/';
 
-var webpack = require('webpack'),
-  path = require('path'),
+var path = require('path'),
   fs = require('fs'),
   config = require('../webpack.config'),
   ZipPlugin = require('zip-webpack-plugin');
@@ -22,6 +21,4 @@ config.plugins = (config.plugins || []).concat(
   })
 );
 
-webpack(config, function (err) {
-  if (err) throw err;
-});
+module.exports = config;

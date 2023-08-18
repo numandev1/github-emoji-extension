@@ -1,4 +1,5 @@
-import {useRef, useEffect, useMemo} from 'react';
+// @ts-nocheck
+import { useRef, useEffect, useMemo } from 'react';
 
 export interface CallOptions {
   leading?: boolean;
@@ -87,12 +88,12 @@ export interface DebouncedState<T extends (...args: any[]) => ReturnType<T>>
  * const status = debounced.pending() ? "Pending..." : "Ready"
  */
 export default function useDebouncedCallback<
-  T extends (...args: any[]) => ReturnType<T>,
+  T extends (...args: any[]) => ReturnType<T>
 >(func: T, wait?: number, options?: Options): DebouncedState<T> {
-  const lastCallTime = useRef(null);
+  const lastCallTime = useRef<any>(null);
   const lastInvokeTime = useRef(0);
-  const timerId = useRef(null);
-  const lastArgs = useRef<unknown[]>([]);
+  const timerId = useRef<any>(null);
+  const lastArgs = useRef<any>([]);
   const lastThis = useRef<unknown>();
   const result = useRef<ReturnType<T>>();
   const funcRef = useRef(func);
@@ -107,13 +108,13 @@ export default function useDebouncedCallback<
     throw new TypeError('Expected a function');
   }
 
-  wait = +wait || 0;
+  wait = +(wait || 0);
   options = options || {};
 
   const leading = !!options.leading;
   const trailing = 'trailing' in options ? !!options.trailing : true; // `true` by default
   const maxing = 'maxWait' in options;
-  const maxWait = maxing ? Math.max(+options.maxWait || 0, wait) : null;
+  const maxWait: any = maxing ? Math.max(+options.maxWait || 0, wait) : null;
 
   useEffect(() => {
     mounted.current = true;
