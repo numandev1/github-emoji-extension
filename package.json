@@ -1,6 +1,6 @@
 {
   "name": "github-emoji-extension",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Use emojis in github Issues/PR",
   "license": "MIT",
   "repository": {
