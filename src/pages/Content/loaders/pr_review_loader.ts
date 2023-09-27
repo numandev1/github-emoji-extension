@@ -33,6 +33,14 @@ document.arrive('.js-previewable-comment-form', function (newElem: Element) {
         );
         if (tabHeader && textArea3) {
           initReactAppIntoMarkdownHeader(tabHeader, textArea3);
+        } else {
+          // for issue edit
+          const textArea4: HTMLTextAreaElement | null = newElem.querySelector(
+            'textarea[name="issue_comment[body]"]'
+          );
+          if (tabHeader && textArea4) {
+            initReactAppIntoMarkdownHeader(tabHeader, textArea4);
+          }
         }
       }
     }
