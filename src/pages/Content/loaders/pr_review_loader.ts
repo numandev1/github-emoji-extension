@@ -27,6 +27,13 @@ document.arrive('.js-previewable-comment-form', function (newElem: Element) {
       );
       if (tabHeader && textArea2) {
         initReactAppIntoMarkdownHeader(tabHeader, textArea2);
+      } else {
+        const textArea3: HTMLTextAreaElement | null = newElem.querySelector(
+          'textarea[name="pull_request_review[body]"]'
+        );
+        if (tabHeader && textArea3) {
+          initReactAppIntoMarkdownHeader(tabHeader, textArea3);
+        }
       }
     }
   }
