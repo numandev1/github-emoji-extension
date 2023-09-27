@@ -23,7 +23,6 @@ export const issueLoader = () => {
         const textArea2: HTMLTextAreaElement | null = item.querySelector(
           'textarea[name="issue[body]"]'
         );
-        console.log(tabHeader, textArea2, 'wwww');
         if (tabHeader && textArea2) {
           initReactAppIntoMarkdownHeader(tabHeader, textArea2);
         }
