@@ -25,6 +25,21 @@ export const issueLoader = () => {
         );
         if (tabHeader && textArea2) {
           initReactAppIntoMarkdownHeader(tabHeader, textArea2);
+        } else {
+          const textArea3: HTMLTextAreaElement | null = item.querySelector(
+            'textarea[name="pull_request_review[body]"]'
+          );
+          if (tabHeader && textArea3) {
+            initReactAppIntoMarkdownHeader(tabHeader, textArea3);
+          } else {
+            // for issue edit
+            const textArea4: HTMLTextAreaElement | null = item.querySelector(
+              'textarea[name="issue_comment[body]"]'
+            );
+            if (tabHeader && textArea4) {
+              initReactAppIntoMarkdownHeader(tabHeader, textArea4);
+            }
+          }
         }
       }
     }
