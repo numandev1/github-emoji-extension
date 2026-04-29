@@ -38,7 +38,6 @@ function App({ textArea }: { textArea: HTMLTextAreaElement }) {
       setIsPopoverOpen={setIsPopoverOpen}
       content={content}
       button={button}
-      textArea={textArea}
     />
   );
 }
