@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Popover, ArrowContainer } from 'react-tiny-popover';
 
 type Props = {
@@ -6,7 +6,6 @@ type Props = {
   button: () => React.ReactElement;
   isPopoverOpen: boolean;
   setIsPopoverOpen: (value: boolean) => void;
-  textArea: HTMLTextAreaElement;
 };
 
 const PopoverCom = ({
@@ -14,8 +13,39 @@ const PopoverCom = ({
   button,
   isPopoverOpen,
   setIsPopoverOpen,
-  textArea,
 }: Props) => {
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!isPopoverOpen) {
+      return;
+    }
+
+    const closeOnOutsidePointerDown = (event: PointerEvent) => {
+      const target = event.target as Node;
+      const popoverContainer = document.querySelector('.popover-container');
+
+      if (
+        wrapperRef.current?.contains(target) ||
+        popoverContainer?.contains(target)
+      ) {
+        return;
+      }
+
+      setIsPopoverOpen(false);
+    };
+
+    document.addEventListener('pointerdown', closeOnOutsidePointerDown, true);
+
+    return () => {
+      document.removeEventListener(
+        'pointerdown',
+        closeOnOutsidePointerDown,
+        true
+      );
+    };
+  }, [isPopoverOpen, setIsPopoverOpen]);
+
   return (
     <Popover
       isOpen={isPopoverOpen}
@@ -25,8 +55,6 @@ const PopoverCom = ({
       reposition={false}
       onClickOutside={(e: MouseEvent) => {
         setIsPopoverOpen(false);
-        //@ts-ignore
-        if (e.target?.localName !== 'textarea') textArea?.focus();
       }}
       content={({ position, childRect, popoverRect }) => (
         <ArrowContainer
@@ -43,7 +71,7 @@ const PopoverCom = ({
         </ArrowContainer>
       )}
     >
-      <div>{button()}</div>
+      <div ref={wrapperRef}>{button()}</div>
     </Popover>
   );
 };

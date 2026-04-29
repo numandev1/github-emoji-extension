@@ -1,3 +1,12 @@
+.github_emoji,
+.github_emoji *,
+.popover-container,
+.popover-container * {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
 .gh-emoji-container {
   width: 250px;
   background-color: rgb(250, 249, 249);
@@ -175,7 +184,7 @@
 }
 
 .gh-emoji-directory-wrapper .emojis button {
-  border: 0px px solid transparent;
+  border: 0px solid transparent;
   background-color: transparent;
   font-size: 25px;
   margin-right: 3px;
@@ -207,16 +216,12 @@
   z-index: 99999999999;
 }
 
-
-* {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
-}
-
-textarea:focus,
-button:focus,
-input:focus {
+.github_emoji textarea:focus,
+.github_emoji button:focus,
+.github_emoji input:focus,
+.popover-container textarea:focus,
+.popover-container button:focus,
+.popover-container input:focus {
   outline: none;
 }
 
@@ -224,6 +229,16 @@ input:focus {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+.github_emoji #emoji-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  min-height: 32px;
+  cursor: pointer;
+  user-select: none;
 }
 
 .gh-emoji-output-wrapper {

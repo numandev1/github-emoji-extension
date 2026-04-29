@@ -7,8 +7,14 @@ type Props = {
 };
 
 const Button = ({ onClicEmoji, recentsEmojis }: Props) => {
+  const onClickHandler = (event: React.MouseEvent<HTMLSpanElement>) => {
+    event.preventDefault();
+    event.stopPropagation();
+    onClicEmoji();
+  };
+
   return (
-    <span id="emoji-button" onClick={onClicEmoji}>
+    <span id="emoji-button" onClick={onClickHandler}>
       {recentsEmojis?.length > 0 ? recentsEmojis[0].value : '😋'}
     </span>
   );
